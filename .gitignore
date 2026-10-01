@@ -1,0 +1,13 @@
+node_modules/
+.env
+frontend/node_modules/
+frontend/dist/
+frontend/.env
+edge-agent/edge_config.json
+edge-agent/edge_local_queue.sqlite3
+edge-agent/models/*.pt
+license-tool/syyaim_private.pem
+license-tool/*.lic
+sample-license/
+*.log
+*.tar

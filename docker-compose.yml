@@ -1,0 +1,68 @@
+version: '3.8'
+
+# SafeguardsIQ Enterprise v1 — full air-gapped deployment
+# Everything runs on the customer's server, no internet access needed.
+
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: sgiq_enterprise_postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB:       safeguardsiq_enterprise
+      POSTGRES_USER:     postgres
+      POSTGRES_PASSWORD: ${DB_PASSWORD:-Enterprise@DB2024!}
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      - ./src/db/migrations/001_init.sql:/docker-entrypoint-initdb.d/001_init.sql
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d safeguardsiq_enterprise"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - sgiq
+
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: sgiq_enterprise_backend
+    restart: unless-stopped
+    depends_on:
+      postgres:
+        condition: service_healthy
+    environment:
+      DB_HOST: postgres
+      DB_PORT: 5432
+      DB_NAME: safeguardsiq_enterprise
+      DB_USER: postgres
+      DB_PASSWORD: ${DB_PASSWORD:-Enterprise@DB2024!}
+      JWT_SECRET: ${JWT_SECRET:-change-this-to-a-real-secret}
+      LICENSE_PATH: /data/license/safeguardsiq.lic
+      PORT: 4200
+    volumes:
+      - license_data:/data/license   # customer places .lic file here
+    networks:
+      - sgiq
+
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile.frontend
+    container_name: sgiq_enterprise_frontend
+    restart: unless-stopped
+    depends_on:
+      - backend
+    ports:
+      - "${FRONTEND_PORT:-8080}:80"   # only exposed port — customer accesses dashboard here
+    networks:
+      - sgiq
+
+volumes:
+  pgdata:
+  license_data:
+
+networks:
+  sgiq:
+    driver: bridge

@@ -1,0 +1,7 @@
+requests
+
+# Only needed if using a real RTSP camera or webcam (rtsp_url != "simulate"):
+# opencv-python
+
+# Only needed once a trained model is dropped into models/ppe-v1.pt:
+# ultralytics

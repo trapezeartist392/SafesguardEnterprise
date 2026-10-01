@@ -1,0 +1,102 @@
+/*
+ * theme.css
+ * SafeguardIQ Enterprise — Global Theme CSS Variables
+ * Place in: frontend/src/theme.css
+ * Import in: frontend/src/main.jsx → import './theme.css'
+ * NOTE: No global resets here — only CSS variables and theme switching
+ */
+
+/* ── DARK THEME (default) ── */
+:root,
+[data-theme="dark"] {
+  --bg:        #05080F;
+  --bg2:       #080D18;
+  --card:      #0C1422;
+  --card2:     #101828;
+  --bg-side:   #12171f;
+  --bg-header: #0b0f16;
+
+  --border:    #1A2540;
+  --border-alt:rgba(255,255,255,0.08);
+
+  --text:      #EDF2FF;
+  --text-sub:  #8899BB;
+  --text-mute: #4e596b;
+
+  --orange:    #FF5B18;
+  --teal:      #00D4B4;
+  --blue:      #2D8EFF;
+  --green:     #22D468;
+  --red:       #FF3D3D;
+  --amber:     #FFB400;
+
+  --shadow:    0 4px 24px rgba(0,0,0,0.4);
+  --shadow-sm: 0 2px 8px rgba(0,0,0,0.3);
+  color-scheme: dark;
+}
+
+/* ── LIGHT THEME ── */
+[data-theme="light"] {
+  --bg:        #F0F4F8;
+  --bg2:       #E8EEF5;
+  --card:      #FFFFFF;
+  --card2:     #F5F7FA;
+  --bg-side:   #EDF2F7;
+  --bg-header: #FFFFFF;
+
+  --border:    #D0D7E3;
+  --border-alt:rgba(0,0,0,0.08);
+
+  --text:      #0F1A2E;
+  --text-sub:  #4A5568;
+  --text-mute: #A0AEC0;
+
+  --orange:    #FF5B18;
+  --teal:      #00A693;
+  --blue:      #2563EB;
+  --green:     #16A34A;
+  --red:       #DC2626;
+  --amber:     #D97706;
+
+  --shadow:    0 4px 24px rgba(0,0,0,0.08);
+  --shadow-sm: 0 2px 8px rgba(0,0,0,0.06);
+  color-scheme: light;
+}
+
+/* ── SMOOTH THEME TRANSITION ── */
+*, *::before, *::after {
+  transition: background-color 0.25s ease, border-color 0.25s ease, color 0.25s ease;
+}
+
+/* ── SCROLLBAR ── */
+::-webkit-scrollbar { width: 4px; height: 4px; }
+::-webkit-scrollbar-track { background: var(--bg2, #080D18); }
+::-webkit-scrollbar-thumb { background: var(--border, #1A2540); border-radius: 2px; }
+
+/* ── LIGHT MODE — inputs follow theme ── */
+[data-theme="light"] input,
+[data-theme="light"] select,
+[data-theme="light"] textarea {
+  background: #F5F7FA !important;
+  color:      #0F1A2E !important;
+  border-color: #D0D7E3 !important;
+}
+
+[data-theme="light"] input::placeholder,
+[data-theme="light"] textarea::placeholder {
+  color: #A0AEC0 !important;
+}
+
+/* ── LIGHT MODE — date picker fix ── */
+[data-theme="light"] input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(0.5);
+}
+
+/* ── LIGHT MODE — force readable text on grey elements ── */
+[data-theme="light"] * {
+  --text-force: #1A202C;
+}
+
+#root[style*="invert"] {
+  filter: invert(1) hue-rotate(180deg) contrast(1.4) brightness(0.85) !important;
+}

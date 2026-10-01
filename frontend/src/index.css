@@ -1,0 +1,257 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #080C14;
+  color: #ffffff;
+  font-family: 'Nunito', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 16px;
+  line-height: 1.6;
+  letter-spacing: 0.01em;
+}
+
+html {
+  font-size: 106%;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: rgba(255, 255, 255, 0.25);
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track { background: #0C1525; }
+::-webkit-scrollbar-thumb { background: #2D8EFF44; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #2D8EFF; }
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 768px) {
+
+  /* Nav */
+  nav { flex-wrap: wrap !important; padding: 8px 12px !important; }
+  nav a { font-size: 11px !important; padding: 8px 8px !important; }
+
+  /* Login / Signup page - stack panels */
+  div[style*="width: 50%"] { width: 100% !important; }
+  div[style*="width:50%"]  { width: 100% !important; }
+
+  /* Hide left branding panel on mobile */
+  div[style*="padding: 60px 64px"] { display: none !important; }
+
+  /* Cards full width */
+  div[style*="maxWidth: 420"] { max-width: 100% !important; }
+  div[style*="max-width: 420px"] { max-width: 100% !important; }
+
+  /* Grids - stack to single column */
+  div[style*="gridTemplateColumns: 1fr 1fr"] { grid-template-columns: 1fr !important; }
+  div[style*="grid-template-columns: 1fr 1fr"] { grid-template-columns: 1fr !important; }
+  div[style*="gridTemplateColumns: 1fr 1fr 1fr"] { grid-template-columns: 1fr !important; }
+  div[style*="gridTemplateColumns: 1fr 1fr 1fr 1fr"] { grid-template-columns: 1fr 1fr !important; }
+
+  /* Sidebar - hide on mobile */
+  aside { display: none !important; }
+
+  /* Main content full width */
+  div[style*="flex: 1"] { min-width: 0 !important; }
+
+  /* Safety monitor header - wrap */
+  header div[style*="gap: 20"] { gap: 8px !important; flex-wrap: wrap !important; }
+  header span { font-size: 8px !important; }
+
+  /* Padding reduction */
+  div[style*="padding: 14px"] { padding: 8px !important; }
+  div[style*="padding: 20px"] { padding: 12px !important; }
+  div[style*="padding: 32px"] { padding: 16px !important; }
+
+  /* Font size reduction */
+  div[style*="fontSize: 14"] { font-size: 13px !important; }
+  div[style*="font-size: 14px"] { font-size: 13px !important; }
+
+  /* Buttons full width on mobile */
+  button[style*="width: 100%"] { min-height: 44px !important; }
+
+  /* Compliance, ROI, Form18 cards */
+  div[style*="gridTemplateColumns: 1fr 1fr 1fr 1fr"] {
+    grid-template-columns: 1fr 1fr !important;
+  }
+
+  /* Multi-plant sidebar */
+  div[style*="gridTemplateColumns: 240px 1fr"] {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Heatmap grid */
+  div[style*="minmax(130px, 1fr)"] {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+
+  /* Violation archive table - hide some columns */
+  div[style*="gridTemplateColumns: 140px 90px 80px 80px 1fr 120px 36px"] {
+    grid-template-columns: 1fr 80px 80px 36px !important;
+  }
+
+  /* Step indicator - wrap */
+  div[style*="display: flex"][style*="alignItems: center"][style*="marginBottom: 28"] {
+    flex-wrap: wrap !important;
+    gap: 8px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Extra small screens */
+  div[style*="gridTemplateColumns: 1fr 1fr"] { grid-template-columns: 1fr !important; }
+  div[style*="gridTemplateColumns: 1fr 1fr 1fr"] { grid-template-columns: 1fr !important; }
+  div[style*="gap: 32"] { gap: 16px !important; }
+  div[style*="gap: 20"] { gap: 10px !important; }
+}
+
+/* COMPLIANCE PAGE MOBILE */
+@media (max-width: 768px) {
+  /* Compliance page uses Syne font and different class structure */
+
+  /* Stack all flex rows */
+  div[style*="display: flex"][style*="gap: 24"],
+  div[style*="display: flex"][style*="gap: 20"],
+  div[style*="display: flex"][style*="gap: 16"] {
+    flex-wrap: wrap !important;
+  }
+
+  /* Full width sections */
+  div[style*="width: 280px"],
+  div[style*="width: 320px"],
+  div[style*="width: 260px"],
+  div[style*="minWidth: 280px"],
+  div[style*="min-width: 280px"] {
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+  }
+
+  /* Compliance grid cards */
+  div[style*="gridTemplateColumns: repeat(3"],
+  div[style*="gridTemplateColumns: repeat(4"],
+  div[style*="gridTemplateColumns: repeat(2"] {
+    grid-template-columns: 1fr 1fr !important;
+  }
+
+  /* Chart containers */
+  div[style*="height: 300px"],
+  div[style*="height: 280px"],
+  div[style*="height: 320px"] {
+    height: 200px !important;
+  }
+
+  /* Compliance header */
+  div[style*="justifyContent: space-between"][style*="alignItems: center"] {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 10px !important;
+  }
+
+  /* Tabs */
+  div[style*="display: flex"][style*="borderRadius: 12"][style*="padding: 4px"] {
+    flex-wrap: wrap !important;
+    gap: 4px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  div[style*="gridTemplateColumns: repeat(3"],
+  div[style*="gridTemplateColumns: repeat(4"] {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* COMPLIANCE PAGE SPECIFIC MOBILE FIX */
+@media (max-width: 768px) {
+  /* All repeat grids */
+  div[style*="gridTemplateColumns: repeat(3,1fr)"],
+  div[style*="gridTemplateColumns: repeat(4,1fr)"],
+  div[style*="gridTemplateColumns: repeat(5,1fr)"],
+  div[style*='gridTemplateColumns:"repeat(3'],
+  div[style*='gridTemplateColumns:"repeat(4'],
+  div[style*='gridTemplateColumns:"repeat(5'] {
+    grid-template-columns: 1fr 1fr !important;
+  }
+
+  /* Compliance sidebar nav */
+  div[style*="width:220px"],
+  div[style*="width: 220px"],
+  div[style*="minWidth:220px"],
+  div[style*="min-width:220px"] {
+    width: 100% !important;
+    min-width: 0 !important;
+  }
+
+  /* Tables - horizontal scroll */
+  table { min-width: 600px !important; }
+  div[style*="overflowX:auto"],
+  div[style*="overflow-x: auto"] {
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+  }
+
+  /* Compliance main layout - stack sidebar + content */
+  div[style*="display:flex"][style*="gap:20"],
+  div[style*="display:flex"][style*="gap:24"],
+  div[style*="display: flex"][style*="gap: 20"],
+  div[style*="display: flex"][style*="gap: 24"] {
+    flex-direction: column !important;
+  }
+
+  /* Header title font size */
+  div[style*="fontSize:38"],
+  div[style*="font-size: 38px"] {
+    font-size: 24px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  div[style*="gridTemplateColumns: repeat(3,1fr)"],
+  div[style*="gridTemplateColumns: repeat(4,1fr)"],
+  div[style*="gridTemplateColumns: repeat(5,1fr)"] {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* READABILITY IMPROVEMENTS */
+/* Increase contrast of secondary text */
+[style*="color:#3A4E72"],
+[style*="color: #3A4E72"] { color: #6B82AA !important; }
+
+[style*="color:#344A6E"],
+[style*="color: #344A6E"] { color: #5A7099 !important; }
+
+[style*="color:#5C6E9A"],
+[style*="color: #5C6E9A"] { color: #7B8EBF !important; }
+
+[style*="color:#8899BB"],
+[style*="color: #8899BB"] { color: #9AAACE !important; }
+
+/* Better font rendering for monospace */
+[style*="fontFamily:'Share Tech Mono'"],
+[style*="fontFamily:'DM Mono'"],
+[style*="fontFamily:'Barlow Condensed'"] {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Improve small text readability */
+[style*="fontSize:9"],
+[style*="fontSize:10"],
+[style*="font-size: 9px"],
+[style*="font-size: 10px"] {
+  letter-spacing: 0.05em;
+}

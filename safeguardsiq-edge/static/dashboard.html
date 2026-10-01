@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SafeguardsIQ Edge — Factory Safety Monitor</title>
+<style>
+:root{--bg:#05080F;--card:#0C1422;--card2:#101828;--border:#1A2540;--orange:#FF5B18;--teal:#00D4B4;--blue:#2D8EFF;--white:#EDF2FF;--g1:#8899BB;--g2:#3A4E72;--green:#22D468;--red:#FF3D3D;--amber:#FFB400;--font:'Segoe UI',system-ui,-apple-system,sans-serif}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--g1);font-family:var(--font);font-size:13px}
+a{color:var(--teal);text-decoration:none}
+
+/* Header */
+.header{background:var(--card);border-bottom:1px solid var(--border);padding:12px 20px;display:flex;align-items:center;gap:16px;position:sticky;top:0;z-index:100}
+.logo{font-size:16px;font-weight:800;color:var(--orange)}
+.logo span{color:var(--white)}
+.header-stats{display:flex;gap:20px;margin-left:auto}
+.header-stat{text-align:center}
+.header-stat .val{font-size:20px;font-weight:800;line-height:1}
+.header-stat .lbl{font-size:9px;letter-spacing:1.5px;color:var(--g2)}
+
+/* Main grid */
+.main{display:grid;grid-template-columns:1fr 320px;gap:16px;padding:16px;max-width:1600px;margin:0 auto}
+@media(max-width:900px){.main{grid-template-columns:1fr}}
+
+/* Panels */
+.panel{background:var(--card);border:1px solid var(--border);border-radius:12px;overflow:hidden;margin-bottom:16px}
+.panel-header{background:var(--bg);padding:12px 16px;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:10px}
+.panel-title{font-size:13px;font-weight:700;color:var(--white)}
+.panel-badge{font-size:10px;padding:2px 8px;border-radius:4px;font-weight:700}
+.panel-body{padding:16px}
+
+/* Camera grid */
+.cam-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:12px}
+.cam-card{background:var(--card2);border:1px solid var(--border);border-radius:10px;overflow:hidden;transition:border-color .2s}
+.cam-card.violation{border-color:var(--red);box-shadow:0 0 20px rgba(255,61,61,.15)}
+.cam-card.online{border-color:rgba(34,212,104,.3)}
+.cam-frame{position:relative;aspect-ratio:16/9;background:#000;overflow:hidden}
+.cam-frame img{width:100%;height:100%;object-fit:cover}
+.cam-frame .badge{position:absolute;top:6px;left:8px;display:flex;align-items:center;gap:5px;background:rgba(0,0,0,.7);padding:3px 8px;border-radius:4px;font-size:9px;letter-spacing:1px}
+.cam-frame .age{position:absolute;bottom:6px;right:8px;background:rgba(0,0,0,.7);padding:2px 7px;border-radius:3px;font-size:9px;color:var(--g2)}
+.cam-info{padding:10px 12px}
+.cam-label{font-size:12px;font-weight:800;color:var(--white)}
+.cam-zone{font-size:10px;color:var(--g2);margin-top:2px}
+.cam-stats{display:grid;grid-template-columns:1fr 1fr 1fr;gap:6px;margin-top:8px}
+.cam-stat{text-align:center;padding:4px;background:var(--card);border:1px solid var(--border);border-radius:6px}
+.cam-stat .v{font-size:14px;font-weight:800;line-height:1}
+.cam-stat .l{font-size:8px;letter-spacing:.5px;color:var(--g2)}
+
+/* Status dot */
+.dot{width:7px;height:7px;border-radius:50%;display:inline-block}
+.dot.online{background:var(--green)}
+.dot.offline{background:var(--g2)}
+.dot.violation{background:var(--red);animation:pulse 1.2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
+
+/* Violation list */
+.vio-item{display:flex;gap:10px;padding:10px 12px;border-bottom:1px solid var(--border);align-items:start}
+.vio-item:last-child{border-bottom:none}
+.vio-time{font-size:10px;color:var(--g2);white-space:nowrap;min-width:55px}
+.vio-type{font-size:12px;font-weight:700;color:var(--red)}
+.vio-cam{font-size:10px;color:var(--g1)}
+.vio-sev{font-size:9px;padding:2px 6px;border-radius:3px;font-weight:700;white-space:nowrap}
+.vio-sev.critical{background:rgba(255,0,0,.15);color:#FF0000}
+.vio-sev.high{background:rgba(255,61,61,.15);color:var(--red)}
+.vio-sev.medium{background:rgba(255,180,0,.15);color:var(--amber)}
+
+/* KPI bar */
+.kpi-bar{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-bottom:16px}
+.kpi{text-align:center;padding:12px 8px;background:var(--card);border:1px solid var(--border);border-radius:10px}
+.kpi .val{font-size:26px;font-weight:800;line-height:1;margin-bottom:4px}
+.kpi .lbl{font-size:9px;letter-spacing:1px;color:var(--g2)}
+
+/* Buttons */
+.btn{padding:8px 16px;border:none;border-radius:6px;cursor:pointer;font-size:12px;font-weight:700;font-family:inherit;transition:all .15s}
+.btn-orange{background:linear-gradient(135deg,var(--orange),#FF8C52);color:#fff}
+.btn-teal{background:rgba(0,212,180,.12);border:1px solid rgba(0,212,180,.3);color:var(--teal)}
+.btn-sm{padding:5px 10px;font-size:10px}
+
+/* Add camera form */
+.form-row{display:flex;gap:8px;margin-bottom:8px}
+.form-row input{flex:1;padding:8px 10px;background:var(--card2);border:1px solid var(--border);border-radius:6px;color:var(--white);font-size:12px;font-family:inherit}
+.form-row input::placeholder{color:var(--g2)}
+
+/* System info */
+.sys-row{display:flex;justify-content:space-between;padding:6px 0;border-bottom:1px solid var(--border);font-size:11px}
+.sys-row:last-child{border-bottom:none}
+.sys-label{color:var(--g2)}
+.sys-value{color:var(--g1);font-weight:600}
+</style>
+</head>
+<body>
+
+<!-- Header -->
+<div class="header">
+  <div class="logo">SAFEGUARDS<span>IQ</span> <span style="font-size:10px;color:var(--teal);font-weight:400">EDGE</span></div>
+  <div style="font-size:10px;color:var(--g2);letter-spacing:2px">ON-PREMISE AI SAFETY MONITOR</div>
+  <div class="header-stats">
+    <div class="header-stat"><div class="val" style="color:var(--teal)" id="h-cams">0</div><div class="lbl">CAMERAS</div></div>
+    <div class="header-stat"><div class="val" style="color:var(--red)" id="h-viols">0</div><div class="lbl">VIOLATIONS</div></div>
+    <div class="header-stat"><div class="val" style="color:var(--green)" id="h-comp">100%</div><div class="lbl">COMPLIANCE</div></div>
+    <div class="header-stat"><div class="val" style="color:var(--g1)" id="h-time">--:--</div><div class="lbl">TIME</div></div>
+  </div>
+</div>
+
+<!-- Main -->
+<div class="main">
+  <div class="left">
+    <!-- KPI Bar -->
+    <div class="kpi-bar">
+      <div class="kpi"><div class="val" style="color:var(--orange)" id="kpi-viols">0</div><div class="lbl">VIOLATIONS</div></div>
+      <div class="kpi"><div class="val" style="color:var(--red)" id="kpi-ppe">0</div><div class="lbl">PPE</div></div>
+      <div class="kpi"><div class="val" style="color:var(--amber)" id="kpi-unsafe">0</div><div class="lbl">UNSAFE</div></div>
+      <div class="kpi"><div class="val" style="color:var(--green)" id="kpi-checks">0</div><div class="lbl">CHECKS</div></div>
+      <div class="kpi"><div class="val" style="color:var(--teal)" id="kpi-savings">0%</div><div class="lbl">API SAVED</div></div>
+    </div>
+
+    <!-- Camera Grid -->
+    <div class="panel">
+      <div class="panel-header">
+        <span style="font-size:16px">📹</span>
+        <span class="panel-title">Live Cameras</span>
+        <span class="panel-badge" style="background:rgba(34,212,104,.12);color:var(--green)" id="cam-count">0 online</span>
+        <div style="margin-left:auto;display:flex;gap:8px">
+          <button class="btn btn-teal btn-sm" onclick="startAll()">▶ Start All</button>
+          <button class="btn btn-sm" style="background:var(--card2);color:var(--g1);border:1px solid var(--border)" onclick="showAddCamera()">+ Add Camera</button>
+        </div>
+      </div>
+      <div class="panel-body">
+        <div id="add-camera-form" style="display:none;margin-bottom:16px;padding:12px;background:var(--card2);border-radius:8px">
+          <div class="form-row">
+            <input type="text" id="new-cam-label" placeholder="Camera label (e.g. CAM-01)">
+            <input type="text" id="new-cam-url" placeholder="RTSP URL (rtsp://admin:pass@192.168.1.101:554/stream1)">
+          </div>
+          <div class="form-row">
+            <input type="text" id="new-cam-zone" placeholder="Zone (e.g. Welding Bay, Assembly Line)">
+            <button class="btn btn-orange btn-sm" onclick="addCamera()">Add Camera</button>
+            <button class="btn btn-sm" style="background:var(--card);color:var(--g2);border:1px solid var(--border)" onclick="hideAddCamera()">Cancel</button>
+          </div>
+        </div>
+        <div class="cam-grid" id="cam-grid">
+          <div style="text-align:center;padding:40px;color:var(--g2)">
+            <div style="font-size:32px;margin-bottom:8px">📹</div>
+            Loading cameras...
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Right sidebar -->
+  <div class="right">
+    <!-- Recent Violations -->
+    <div class="panel">
+      <div class="panel-header">
+        <span style="font-size:14px">🚨</span>
+        <span class="panel-title">Recent Violations</span>
+      </div>
+      <div id="violations-list" style="max-height:400px;overflow-y:auto">
+        <div style="text-align:center;padding:20px;color:var(--g2);font-size:11px">No violations today</div>
+      </div>
+    </div>
+
+    <!-- Shift Report -->
+    <div class="panel">
+      <div class="panel-header">
+        <span style="font-size:14px">🕐</span>
+        <span class="panel-title">Current Shift</span>
+        <span class="panel-badge" style="background:rgba(45,142,255,.12);color:var(--blue)" id="shift-name">—</span>
+      </div>
+      <div class="panel-body" id="shift-info">
+        <div style="text-align:center;color:var(--g2);font-size:11px">Loading...</div>
+      </div>
+    </div>
+
+    <!-- System Info -->
+    <div class="panel">
+      <div class="panel-header">
+        <span style="font-size:14px">⚙️</span>
+        <span class="panel-title">System</span>
+      </div>
+      <div class="panel-body" id="system-info">
+        <div style="text-align:center;color:var(--g2);font-size:11px">Loading...</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+const API = '';  // same origin
+
+// ── Poll data ──
+async function fetchStats() {
+  try {
+    const r = await fetch(`${API}/api/stats`);
+    const d = (await r.json()).data;
+    document.getElementById('h-viols').textContent = d.violations_today || 0;
+    document.getElementById('h-comp').textContent = (d.compliance_rate || 100) + '%';
+    document.getElementById('h-cams').textContent = (d.cameras_online || 0) + '/' + (d.cameras_total || 0);
+    document.getElementById('kpi-viols').textContent = d.violations_today || 0;
+    document.getElementById('kpi-ppe').textContent = d.ppe_count || 0;
+    document.getElementById('kpi-unsafe').textContent = d.unsafe_count || 0;
+    document.getElementById('kpi-checks').textContent = d.total_checks || 0;
+    document.getElementById('kpi-savings').textContent = (d.api_savings_pct || 0) + '%';
+    document.getElementById('cam-count').textContent = `${d.cameras_online || 0} online`;
+  } catch(e) {}
+}
+
+async function fetchCameras() {
+  try {
+    const r = await fetch(`${API}/api/cameras`);
+    const cameras = (await r.json()).data || [];
+    const grid = document.getElementById('cam-grid');
+
+    if (cameras.length === 0) {
+      grid.innerHTML = '<div style="text-align:center;padding:40px;color:var(--g2)"><div style="font-size:32px;margin-bottom:8px">📹</div>No cameras configured<br><br><button class="btn btn-orange" onclick="showAddCamera()">+ Add Your First Camera</button></div>';
+      return;
+    }
+
+    grid.innerHTML = cameras.map(cam => {
+      const isOnline = cam.status === 'online' || cam.status === 'running' || cam.status === 'analysing';
+      const hasViolation = (cam.live_violations || 0) > 0;
+      const cls = hasViolation ? 'violation' : isOnline ? 'online' : '';
+      const riskColor = hasViolation ? 'var(--red)' : 'var(--green)';
+
+      return `<div class="cam-card ${cls}">
+        <div class="cam-frame" id="frame-${cam.cam_label}">
+          <div style="display:flex;align-items:center;justify-content:center;height:100%;color:var(--g2);font-size:10px;letter-spacing:2px">
+            ${isOnline ? 'Loading frame...' : 'OFFLINE'}
+          </div>
+          <div class="badge">
+            <div class="dot ${hasViolation?'violation':isOnline?'online':'offline'}"></div>
+            <span style="color:${isOnline?'var(--green)':'var(--g2)'}">${cam.status?.toUpperCase() || 'OFFLINE'}</span>
+          </div>
+        </div>
+        <div class="cam-info">
+          <div class="cam-label">📹 ${cam.cam_label}</div>
+          <div class="cam-zone">${cam.zone || 'No zone assigned'}</div>
+          <div class="cam-stats">
+            <div class="cam-stat"><div class="v" style="color:${(cam.live_persons||cam.persons_detected||0)>0?'var(--blue)':'var(--g2)'}">${cam.live_persons||cam.persons_detected||0}</div><div class="l">PERSONS</div></div>
+            <div class="cam-stat"><div class="v" style="color:${(cam.violations_today||0)>0?'var(--red)':'var(--green)'}">${cam.violations_today||0}</div><div class="l">VIOLATIONS</div></div>
+            <div class="cam-stat"><div class="v" style="color:${riskColor}">${(cam.live_risk||cam.risk_level||'safe').toUpperCase()}</div><div class="l">RISK</div></div>
+          </div>
+          <div style="display:flex;gap:6px;margin-top:8px">
+            ${!cam.is_active ? `<button class="btn btn-teal btn-sm" onclick="startCam('${cam.cam_label}')">▶ Start</button>` : `<button class="btn btn-sm" style="background:rgba(255,61,61,.1);border:1px solid rgba(255,61,61,.3);color:var(--red)" onclick="stopCam('${cam.cam_label}')">■ Stop</button>`}
+          </div>
+        </div>
+      </div>`;
+    }).join('');
+
+    // Fetch live frames
+    cameras.forEach(cam => fetchLiveFrame(cam.cam_label));
+  } catch(e) {}
+}
+
+async function fetchLiveFrame(camLabel) {
+  try {
+    const r = await fetch(`${API}/api/live-frame/${encodeURIComponent(camLabel)}`);
+    const d = await r.json();
+    if (d.success && d.frame) {
+      const el = document.getElementById(`frame-${camLabel}`);
+      if (el) {
+        const badge = el.querySelector('.badge');
+        el.innerHTML = `<img src="data:image/jpeg;base64,${d.frame}" alt="Live">`;
+        if (badge) el.appendChild(badge);
+        const ageDiv = document.createElement('div');
+        ageDiv.className = 'age';
+        ageDiv.textContent = `${d.ageSeconds}s ago`;
+        el.appendChild(ageDiv);
+      }
+    }
+  } catch(e) {}
+}
+
+async function fetchViolations() {
+  try {
+    const r = await fetch(`${API}/api/violations?hours=24&limit=20`);
+    const viols = (await r.json()).data || [];
+    const el = document.getElementById('violations-list');
+
+    if (viols.length === 0) {
+      el.innerHTML = '<div style="text-align:center;padding:20px;color:var(--green);font-size:11px">✅ No violations today — all clear!</div>';
+      return;
+    }
+
+    el.innerHTML = viols.map(v => {
+      const time = new Date(v.occurred_at).toLocaleTimeString('en-IN', {hour:'2-digit',minute:'2-digit',hour12:true});
+      const sevCls = v.severity === 'critical' ? 'critical' : v.severity === 'high' ? 'high' : 'medium';
+      return `<div class="vio-item">
+        <div class="vio-time">${time}</div>
+        <div style="flex:1">
+          <div class="vio-type">${v.violation_type}</div>
+          <div class="vio-cam">${v.cam_label} ${v.zone ? '· ' + v.zone : ''}</div>
+        </div>
+        <div class="vio-sev ${sevCls}">${v.severity}</div>
+      </div>`;
+    }).join('');
+  } catch(e) {}
+}
+
+async function fetchShift() {
+  try {
+    const r = await fetch(`${API}/api/shifts`);
+    const d = await r.json();
+    document.getElementById('shift-name').textContent = d.current_shift || '—';
+    const stats = d.stats || {};
+    const el = document.getElementById('shift-info');
+    const shifts = Object.entries(stats);
+    if (shifts.length === 0) {
+      el.innerHTML = '<div style="font-size:11px;color:var(--green)">No violations this shift</div>';
+    } else {
+      el.innerHTML = shifts.map(([s,c]) => `<div class="sys-row"><span class="sys-label">${s}</span><span class="sys-value" style="color:var(--red)">${c} violations</span></div>`).join('');
+    }
+  } catch(e) {}
+}
+
+async function fetchSystem() {
+  try {
+    const r = await fetch(`${API}/api/system`);
+    const d = (await r.json()).data;
+    const el = document.getElementById('system-info');
+    el.innerHTML = `
+      <div class="sys-row"><span class="sys-label">Host</span><span class="sys-value">${d.hostname||'—'}</span></div>
+      <div class="sys-row"><span class="sys-label">AI Model</span><span class="sys-value" style="color:${d.model_loaded?'var(--green)':'var(--red)'}">${d.model_loaded?'Loaded':'Not loaded'}</span></div>
+      <div class="sys-row"><span class="sys-label">Active cameras</span><span class="sys-value">${(d.active_cameras||[]).length}</span></div>
+      ${d.cpu_percent !== undefined ? `<div class="sys-row"><span class="sys-label">CPU</span><span class="sys-value">${d.cpu_percent}%</span></div>` : ''}
+      ${d.memory_percent !== undefined ? `<div class="sys-row"><span class="sys-label">RAM</span><span class="sys-value">${d.memory_used_gb}/${d.memory_total_gb} GB (${d.memory_percent}%)</span></div>` : ''}
+      ${d.temperature_c !== undefined ? `<div class="sys-row"><span class="sys-label">Temp</span><span class="sys-value" style="color:${d.temperature_c>75?'var(--red)':d.temperature_c>60?'var(--amber)':'var(--green)'}">${d.temperature_c}°C</span></div>` : ''}
+      ${d.disk_percent !== undefined ? `<div class="sys-row"><span class="sys-label">Disk</span><span class="sys-value">${d.disk_used_gb}/${d.disk_total_gb} GB</span></div>` : ''}
+    `;
+  } catch(e) {}
+}
+
+// ── Actions ──
+async function startCam(label) {
+  await fetch(`${API}/api/cameras/${encodeURIComponent(label)}/start`, {method:'POST'});
+  fetchCameras();
+}
+async function stopCam(label) {
+  await fetch(`${API}/api/cameras/${encodeURIComponent(label)}/stop`, {method:'POST'});
+  fetchCameras();
+}
+async function startAll() {
+  await fetch(`${API}/api/cameras/start-all`, {method:'POST'});
+  fetchCameras();
+}
+
+function showAddCamera() { document.getElementById('add-camera-form').style.display = 'block'; }
+function hideAddCamera() { document.getElementById('add-camera-form').style.display = 'none'; }
+
+async function addCamera() {
+  const label = document.getElementById('new-cam-label').value.trim();
+  const url = document.getElementById('new-cam-url').value.trim();
+  const zone = document.getElementById('new-cam-zone').value.trim();
+  if (!label || !url) { alert('Enter camera label and RTSP URL'); return; }
+  await fetch(`${API}/api/cameras`, {
+    method: 'POST',
+    headers: {'Content-Type':'application/json'},
+    body: JSON.stringify({cam_label:label, rtsp_url:url, zone:zone})
+  });
+  document.getElementById('new-cam-label').value = '';
+  document.getElementById('new-cam-url').value = '';
+  document.getElementById('new-cam-zone').value = '';
+  hideAddCamera();
+  fetchCameras();
+}
+
+// ── Clock ──
+function updateClock() {
+  document.getElementById('h-time').textContent = new Date().toLocaleTimeString('en-IN', {hour:'2-digit',minute:'2-digit',second:'2-digit',hour12:false});
+}
+
+// ── Init ──
+function init() {
+  updateClock();
+  fetchStats();
+  fetchCameras();
+  fetchViolations();
+  fetchShift();
+  fetchSystem();
+
+  setInterval(updateClock, 1000);
+  setInterval(fetchStats, 10000);
+  setInterval(fetchCameras, 10000);
+  setInterval(fetchViolations, 15000);
+  setInterval(fetchShift, 60000);
+  setInterval(fetchSystem, 30000);
+}
+
+init();
+</script>
+</body>
+</html>

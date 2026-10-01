@@ -1,0 +1,511 @@
+Violation No,Date & Time,Type,Category,Camera,Area / Zone,Severity,Confidence %,Description,Status
+VIO-2026-591,"22/6/2026, 12:38:05 pm",Gloves,ppe,laptop-webcam,,high,100.00,Person's hands are clearly visible and bare. NO safety gloves are worn on either hand.,open
+VIO-2026-590,"22/6/2026, 12:38:05 pm",Safety Vest,ppe,laptop-webcam,,high,100.00,Person visible in center-foreground wearing only black casual shirt. NO safety vest is worn or visible.,open
+VIO-2026-589,"22/6/2026, 12:38:05 pm",Helmet,ppe,laptop-webcam,,high,100.00,Person visible in center-foreground wearing glasses and casual office clothing (black shirt). NO safety helmet is worn or visible.,open
+VIO-2026-588,"22/6/2026, 12:37:50 pm",Gloves,ppe,laptop-webcam,,high,100.00,Person's hands are clearly visible and bare. No safety gloves are worn on either hand.,open
+VIO-2026-587,"22/6/2026, 12:37:50 pm",Safety Vest,ppe,laptop-webcam,,critical,100.00,Person is wearing dark casual clothing (black jacket over shirt) with NO visible safety vest. Required high-visibility safety vest is absent.,open
+VIO-2026-586,"22/6/2026, 12:37:50 pm",Helmet,ppe,laptop-webcam,,critical,100.00,Person in center-foreground is NOT wearing a safety helmet. Head is completely unprotected.,open
+VIO-2026-585,"22/6/2026, 12:37:35 pm",Gloves,ppe,laptop-webcam,,high,100.00,"Worker's hands are completely visible and bare. No safety gloves, work gloves, or hand protection of any kind is worn.",open
+VIO-2026-584,"22/6/2026, 12:37:35 pm",Safety Vest,ppe,laptop-webcam,,high,100.00,Worker wearing only casual black clothing (appears to be casual shirt/jacket). No high-visibility safety vest or reflective wear visible. Only black casual clothing confirmed.,open
+VIO-2026-583,"22/6/2026, 12:37:35 pm",Helmet,ppe,laptop-webcam,,high,100.00,Person in indoor factory/office setting not wearing safety helmet. Head is completely exposed with no protective headgear visible.,open
+VIO-2026-582,"22/6/2026, 12:37:20 pm",Gloves,ppe,laptop-webcam,,high,99.00,Person's hands are clearly visible and NO safety gloves are worn. Gloves are mandatory PPE for factory workers.,open
+VIO-2026-581,"22/6/2026, 12:37:20 pm",Safety Vest,ppe,laptop-webcam,,high,99.00,Person wearing black shirt/casual clothing with NO safety vest visible. High-visibility safety vest is mandatory PPE in factory.,open
+VIO-2026-580,"22/6/2026, 12:37:20 pm",Helmet,ppe,laptop-webcam,,high,98.00,Person in center of frame wearing glasses but NO safety helmet visible on head. Helmet is mandatory PPE in factory environment.,open
+VIO-2026-579,"22/6/2026, 12:37:05 pm",Gloves,ppe,laptop-webcam,,high,100.00,Person's hands are clearly visible and bare with no safety gloves worn.,open
+VIO-2026-578,"22/6/2026, 12:37:05 pm",Safety Vest,ppe,laptop-webcam,,high,100.00,Person wearing black casual shirt with no safety vest or high-visibility clothing visible.,open
+VIO-2026-577,"22/6/2026, 12:37:05 pm",Helmet,ppe,laptop-webcam,,high,100.00,Person in center of frame wearing casual office clothing (black shirt) with no safety helmet visible on head.,open
+VIO-2026-576,"22/6/2026, 12:36:50 pm",Gloves,ppe,laptop-webcam,,high,100.00,Person's hands are visible and bare. No safety gloves are worn. Gloves are required PPE for factory personnel.,open
+VIO-2026-575,"22/6/2026, 12:36:50 pm",Safety Vest,ppe,laptop-webcam,,high,100.00,Person visible wearing only black casual shirt with no visible safety vest. High-visibility safety vest is required and is not worn.,open
+VIO-2026-574,"22/6/2026, 12:36:50 pm",Helmet,ppe,laptop-webcam,,high,100.00,Person visible in foreground wearing glasses and casual office clothing (black shirt) with no safety helmet worn. Helmet is mandatory PPE in factory environment and is not present.,open
+VIO-2026-573,"22/6/2026, 12:36:35 pm",Gloves,ppe,laptop-webcam,,high,100.00,Person's hands are completely exposed with no safety gloves visible.,open
+VIO-2026-572,"22/6/2026, 12:36:35 pm",Safety Vest,ppe,laptop-webcam,,critical,100.00,Person wearing casual black shirt/jacket with no visible safety vest or high-visibility clothing.,open
+VIO-2026-571,"22/6/2026, 12:36:35 pm",Helmet,ppe,laptop-webcam,,critical,100.00,Person present in factory/industrial setting without safety helmet. Head is completely unprotected.,open
+VIO-2026-570,"22/6/2026, 12:36:20 pm",Gloves,ppe,laptop-webcam,,high,100.00,Person's hands are fully visible and exposed. No safety gloves are worn on either hand.,open
+VIO-2026-569,"22/6/2026, 12:36:20 pm",Safety Vest,ppe,laptop-webcam,,high,100.00,Person wearing only black casual shirt with no high-visibility safety vest visible. Required safety vest is not worn.,open
+VIO-2026-568,"22/6/2026, 12:36:20 pm",Helmet,ppe,laptop-webcam,,high,100.00,Person visible in center-foreground wearing glasses and casual black shirt. No safety helmet is worn on head.,open
+VIO-2026-567,"22/6/2026, 12:36:06 pm",Gloves,ppe,laptop-webcam,,high,100.00,Both hands of person clearly visible with no safety gloves worn,open
+VIO-2026-566,"22/6/2026, 12:36:06 pm",Safety Vest,ppe,laptop-webcam,,high,98.00,Person wearing dark casual shirt/black collar clothing without any visible safety vest or high-visibility garment,open
+VIO-2026-565,"22/6/2026, 12:36:06 pm",Helmet,ppe,laptop-webcam,,high,95.00,Person in indoor factory/office setting wearing glasses but no safety helmet visible on head,open
+VIO-2026-564,"22/6/2026, 12:35:50 pm",Gloves,ppe,laptop-webcam,,high,100.00,Person's visible hands and arms show no safety gloves worn while in factory facility.,open
+VIO-2026-563,"22/6/2026, 12:35:50 pm",Safety Vest,ppe,laptop-webcam,,high,100.00,Person visible wearing dark casual shirt with no high-visibility safety vest worn over torso.,open
+VIO-2026-562,"22/6/2026, 12:35:50 pm",Helmet,ppe,laptop-webcam,,high,100.00,Person visible in foreground wearing casual office attire (dark shirt) with no safety helmet worn on head.,open
+VIO-2026-561,"22/6/2026, 12:34:21 pm",Gloves,ppe,laptop-webcam,,high,90.00,Person visible in right foreground shows no safety gloves on hands. Bare hands are exposed.,open
+VIO-2026-560,"22/6/2026, 12:34:21 pm",Safety Vest,ppe,laptop-webcam,,critical,95.00,Person in right foreground is not wearing any visible safety vest or high-visibility clothing required for factory floor operations.,open
+VIO-2026-559,"22/6/2026, 12:34:21 pm",Helmet,ppe,laptop-webcam,,critical,95.00,Person visible in right foreground wearing casual office clothing (dark colored shirt/top). No safety helmet is clearly visible on the person's head.,open
+VIO-2026-558,"22/6/2026, 12:34:05 pm",Gloves,ppe,laptop-webcam,,high,90.00,Person in right side of frame. No safety gloves are clearly visible on hands.,open
+VIO-2026-557,"22/6/2026, 12:34:05 pm",Safety Vest,ppe,laptop-webcam,,high,95.00,Person in right side of frame wearing casual office clothing. No safety vest is clearly visible on person.,open
+VIO-2026-556,"22/6/2026, 12:34:05 pm",Helmet,ppe,laptop-webcam,,high,95.00,Person visible in right side of frame wearing casual office clothing (dark shirt/jeans). No safety helmet is clearly visible on person.,open
+VIO-2026-555,"22/6/2026, 12:33:50 pm",Gloves,ppe,laptop-webcam,,high,90.00,"Person visible with bare hands exposed, no safety gloves clearly visible or worn",open
+VIO-2026-554,"22/6/2026, 12:33:50 pm",Safety Vest,ppe,laptop-webcam,,high,95.00,Person in casual office clothing with no reflective safety vest clearly visible or worn,open
+VIO-2026-553,"22/6/2026, 12:33:50 pm",Helmet,ppe,laptop-webcam,,high,95.00,Person visible in right foreground wearing casual office clothing (dark colored shirt/top) with no safety helmet worn or visible,open
+VIO-2026-552,"22/6/2026, 12:33:35 pm",Gloves,ppe,laptop-webcam,,high,90.00,Person visible in right foreground with NO safety gloves worn or visible on hands,open
+VIO-2026-551,"22/6/2026, 12:33:35 pm",Safety Vest,ppe,laptop-webcam,,critical,95.00,Person visible in right foreground wearing casual office clothing with NO safety vest worn or visible,open
+VIO-2026-550,"22/6/2026, 12:33:35 pm",Helmet,ppe,laptop-webcam,,critical,95.00,Person visible in right foreground wearing casual office clothing (dark colored shirt/top) with NO safety helmet worn or visible,open
+VIO-2026-549,"22/6/2026, 12:33:05 pm",Gloves,ppe,laptop-webcam,,high,90.00,"Person visible in right foreground with bare hands visible, NO safety gloves worn",open
+VIO-2026-548,"22/6/2026, 12:33:05 pm",Safety Vest,ppe,laptop-webcam,,high,95.00,Person visible in right foreground wearing casual office clothing with NO safety vest clearly visible,open
+VIO-2026-547,"22/6/2026, 12:33:05 pm",Helmet,ppe,laptop-webcam,,high,95.00,Person visible in right foreground wearing casual office clothing (dark shirt/jeans) with NO helmet worn on head,open
+VIO-2026-546,"22/6/2026, 12:32:50 pm",Gloves,ppe,laptop-webcam,,high,90.00,Hands and arms visible on person. No safety gloves are worn on either hand.,open
+VIO-2026-545,"22/6/2026, 12:32:50 pm",Safety Vest,ppe,laptop-webcam,,high,95.00,Person wearing dark casual shirt with no visible safety vest or high-visibility clothing.,open
+VIO-2026-544,"22/6/2026, 12:32:50 pm",Helmet,ppe,laptop-webcam,,high,95.00,Person visible in indoor factory/office setting wearing casual black shirt. No safety helmet is worn on head.,open
+VIO-2026-543,"22/6/2026, 12:32:36 pm",Gloves,ppe,laptop-webcam,,high,100.00,Person's hands are clearly visible and bare. No safety gloves are worn.,open
+VIO-2026-542,"22/6/2026, 12:32:36 pm",Safety Vest,ppe,laptop-webcam,,high,100.00,Person is wearing dark casual shirt/jacket without any visible safety vest or high-visibility garment.,open
+VIO-2026-541,"22/6/2026, 12:32:36 pm",Helmet,ppe,laptop-webcam,,high,100.00,Person visible in center-foreground wearing glasses and casual office attire. No safety helmet is worn or visible.,open
+VIO-2026-540,"22/6/2026, 12:32:20 pm",Gloves,ppe,laptop-webcam,,high,100.00,"Person visible in foreground with bare hands, no safety gloves worn",open
+VIO-2026-539,"22/6/2026, 12:32:20 pm",Safety Vest,ppe,laptop-webcam,,critical,100.00,Person visible in foreground wearing only black casual clothing with no safety vest visible,open
+VIO-2026-538,"22/6/2026, 12:32:20 pm",Helmet,ppe,laptop-webcam,,critical,100.00,Person visible in foreground wearing casual black clothing with no safety helmet worn on head,open
+VIO-2026-537,"22/6/2026, 12:32:06 pm",Gloves,ppe,laptop-webcam,,high,100.00,Person visible in foreground with no safety gloves worn. Hands are fully exposed without required hand protection.,open
+VIO-2026-536,"22/6/2026, 12:32:06 pm",Safety Vest,ppe,laptop-webcam,,critical,100.00,Person visible in foreground with no safety vest or high-visibility clothing worn. Required PPE for factory floor personnel is not in place.,open
+VIO-2026-535,"22/6/2026, 12:32:06 pm",Helmet,ppe,laptop-webcam,,critical,100.00,Person visible in foreground wearing casual clothing (dark shirt/jacket) with no safety helmet worn. This is a factory environment requiring mandatory head protection.,open
+VIO-2026-534,"22/6/2026, 12:31:51 pm",Gloves,ppe,laptop-webcam,,high,95.00,Person's hands are visible and NO safety gloves are worn. Hands are unprotected. Safety gloves are mandatory PPE in factory environment.,open
+VIO-2026-533,"22/6/2026, 12:31:51 pm",Safety Vest,ppe,laptop-webcam,,high,100.00,Person wearing dark casual shirt with NO visible safety vest or high-visibility reflective vest. Safety vest is mandatory PPE in factory environment.,open
+VIO-2026-532,"22/6/2026, 12:31:51 pm",Helmet,ppe,laptop-webcam,,high,100.00,Person in foreground wearing casual office clothing (dark shirt) with NO safety helmet visible on head. Helmet is mandatory PPE in factory environment per Factories Act 1948.,open
+VIO-2026-531,"22/6/2026, 12:31:38 pm",Phone Use Near Hazard,unsafe,laptop-webcam,,high,95.00,"Person holding mobile phone to ear in what appears to be a factory/industrial environment with ceiling fan visible, indicating active machinery zone.",open
+VIO-2026-530,"22/6/2026, 12:31:38 pm",Gloves,ppe,laptop-webcam,,high,100.00,Person's hands are visible and bare. No safety gloves are worn on either hand.,open
+VIO-2026-529,"22/6/2026, 12:31:38 pm",Safety Vest,ppe,laptop-webcam,,high,100.00,Person wearing dark colored casual shirt with no visible high-visibility safety vest or protective vest.,open
+VIO-2026-528,"22/6/2026, 12:31:38 pm",Helmet,ppe,laptop-webcam,,high,100.00,Person in factory/industrial setting wearing glasses and casual shirt. No safety helmet is visible on head.,open
+VIO-2026-527,"22/6/2026, 12:31:21 pm",Phone use near hazard,unsafe,laptop-webcam,,high,85.00,"Person appears to be using phone or hand device while in factory environment, creating distraction near potential machinery/hazards",open
+VIO-2026-526,"22/6/2026, 12:31:21 pm",Gloves,ppe,laptop-webcam,,high,100.00,Person's hands and fingers are visible with NO protective gloves worn. Hand is raised near face,open
+VIO-2026-525,"22/6/2026, 12:31:21 pm",Safety Vest,ppe,laptop-webcam,,high,100.00,Person wearing dark casual shirt with NO reflective safety vest or high-visibility garment worn,open
+VIO-2026-524,"22/6/2026, 12:31:21 pm",Helmet,ppe,laptop-webcam,,high,100.00,Person in factory/industrial setting wearing casual office attire (dark shirt) with NO hard hat or safety helmet visible on head,open
+VIO-2026-523,"22/6/2026, 12:31:06 pm",Phone use near hazard,unsafe,laptop-webcam,,high,95.00,Person is using mobile phone while in what appears to be a factory/industrial setting with machinery (ceiling fan visible). Distracted operation is a critical safety violation.,open
+VIO-2026-522,"22/6/2026, 12:31:06 pm",Gloves,ppe,laptop-webcam,,high,100.00,Hands are visible and bare. No safety gloves are worn on either hand.,open
+VIO-2026-521,"22/6/2026, 12:31:06 pm",Safety Vest,ppe,laptop-webcam,,high,98.00,Person wearing casual black shirt with no safety vest visible. High-visibility safety vest is not worn.,open
+VIO-2026-520,"22/6/2026, 12:31:06 pm",Helmet,ppe,laptop-webcam,,high,95.00,Person in office/casual setting not wearing safety helmet. Head protection is not visible.,open
+VIO-2026-519,"22/6/2026, 12:30:53 pm",Unsafe Act - Reaching at Height,unsafe,laptop-webcam,,medium,85.00,Person standing and reaching upward toward ceiling fan/equipment with arm extended. Potential loss of balance hazard while reaching overhead without proper support or harness.,open
+VIO-2026-518,"22/6/2026, 12:30:53 pm",Gloves,ppe,laptop-webcam,,high,100.00,Person's hands are clearly visible and bare. No safety gloves are being worn despite being in factory environment.,open
+VIO-2026-517,"22/6/2026, 12:30:53 pm",Safety Vest,ppe,laptop-webcam,,high,98.00,Person wearing dark colored casual shirt/clothing with no high-visibility safety vest visible. Required PPE not worn.,open
+VIO-2026-516,"22/6/2026, 12:30:53 pm",Helmet,ppe,laptop-webcam,,high,95.00,Person in center of frame wearing glasses but NO safety helmet visible on head. Required PPE not worn.,open
+VIO-2026-515,"22/6/2026, 12:30:35 pm",Gloves,ppe,laptop-webcam,,high,90.00,Person's hands and wrists visible with no safety gloves clearly worn.,open
+VIO-2026-514,"22/6/2026, 12:30:35 pm",Safety Vest,ppe,laptop-webcam,,high,95.00,Person in casual office clothing (pink/light colored shirt) with no high-visibility safety vest clearly worn.,open
+VIO-2026-513,"22/6/2026, 12:30:35 pm",Helmet,ppe,laptop-webcam,,high,95.00,Person visible in center-foreground wearing casual shirt. No safety helmet is clearly visible on head.,open
+VIO-2026-512,"22/6/2026, 12:30:20 pm",Gloves,ppe,laptop-webcam,,high,100.00,Person's hands are visible and bare. No safety gloves are worn on either hand.,open
+VIO-2026-511,"22/6/2026, 12:30:20 pm",Safety Vest,ppe,laptop-webcam,,high,100.00,Person wearing casual dark colored shirt without any visible safety vest or high-visibility clothing.,open
+VIO-2026-510,"22/6/2026, 12:30:20 pm",Helmet,ppe,laptop-webcam,,high,100.00,Person seated indoors without safety helmet. No helmet is visible on the person's head.,open
+VIO-2026-509,"22/6/2026, 12:30:06 pm",Gloves,ppe,laptop-webcam,,high,90.00,Person's hands are visible and bare with NO safety gloves worn,open
+VIO-2026-508,"22/6/2026, 12:30:06 pm",Safety Vest,ppe,laptop-webcam,,high,95.00,Person wearing casual office shirt (appears to be regular dress shirt) with NO safety vest visible,open
+VIO-2026-507,"22/6/2026, 12:30:06 pm",Helmet,ppe,laptop-webcam,,high,95.00,Person visible in center-foreground wearing glasses but NO safety helmet is worn or visible on head,open
+VIO-2026-506,"22/6/2026, 12:29:50 pm",Gloves,ppe,laptop-webcam,,high,90.00,Person's hands are visible and bare. No safety gloves are clearly visible or worn on either hand.,open
+VIO-2026-505,"22/6/2026, 12:29:50 pm",Safety Vest,ppe,laptop-webcam,,high,95.00,Person wearing dark casual shirt (appears to be office attire). No high-visibility safety vest is clearly visible or worn.,open
+VIO-2026-504,"22/6/2026, 12:29:50 pm",Helmet,ppe,laptop-webcam,,high,95.00,Person visible in office/factory setting wearing glasses and casual shirt. No safety helmet is clearly visible or worn on head.,open
+VIO-2026-503,"22/6/2026, 12:29:36 pm",Gloves,ppe,laptop-webcam,,high,100.00,Person's hands are clearly visible and unprotected. No gloves worn on either hand.,open
+VIO-2026-502,"22/6/2026, 12:29:36 pm",Safety Vest,ppe,laptop-webcam,,high,100.00,Person wearing casual dark shirt/clothing with no visible safety vest or high-visibility garment.,open
+VIO-2026-501,"22/6/2026, 12:29:36 pm",Helmet,ppe,laptop-webcam,,high,100.00,Person in office/casual setting not wearing safety helmet. No helmet visible on head.,open
+VIO-2026-500,"22/6/2026, 12:29:20 pm",Gloves,ppe,laptop-webcam,,high,100.00,Person's hands are visible and bare. No safety gloves are worn on either hand.,open
+VIO-2026-499,"22/6/2026, 12:29:20 pm",Safety Vest,ppe,laptop-webcam,,high,100.00,Person wearing dark casual shirt only. No high-visibility safety vest is clearly visible or worn over torso.,open
+VIO-2026-498,"22/6/2026, 12:29:20 pm",Helmet,ppe,laptop-webcam,,high,100.00,Person seated in office/indoor area wearing casual shirt and glasses. No safety helmet is visible or worn on head.,open
+VIO-2026-497,"22/6/2026, 12:29:06 pm",Gloves,ppe,laptop-webcam,,high,100.00,Person's hands are clearly visible with NO safety gloves worn. Gloves are NOT worn.,open
+VIO-2026-496,"22/6/2026, 12:29:06 pm",Safety Vest,ppe,laptop-webcam,,high,100.00,Person wearing dark casual shirt with NO safety vest or high-visibility vest visible. Safety vest is NOT worn.,open
+VIO-2026-495,"22/6/2026, 12:29:06 pm",Helmet,ppe,laptop-webcam,,high,100.00,Person seated in office/indoor area wearing casual clothing (dark shirt) with NO safety helmet visible on head. Helmet is NOT worn.,open
+VIO-2026-494,"22/6/2026, 12:28:50 pm",Gloves,ppe,laptop-webcam,,high,100.00,Person in center-foreground has bare hands visible with NO safety gloves worn.,open
+VIO-2026-493,"22/6/2026, 12:28:50 pm",Safety Vest,ppe,laptop-webcam,,high,100.00,Person in center-foreground wearing dark casual shirt with NO high-visibility safety vest worn.,open
+VIO-2026-492,"22/6/2026, 12:28:50 pm",Helmet,ppe,laptop-webcam,,high,100.00,Person in center-foreground wearing casual clothing (dark shirt) with NO safety helmet visible on head.,open
+VIO-2026-491,"22/6/2026, 12:28:35 pm",Gloves,ppe,laptop-webcam,,high,100.00,Person's hands clearly visible with no safety gloves worn,open
+VIO-2026-490,"22/6/2026, 12:28:35 pm",Safety Vest,ppe,laptop-webcam,,high,100.00,Person wearing only casual black shirt with no high-visibility safety vest,open
+VIO-2026-489,"22/6/2026, 12:28:35 pm",Helmet,ppe,laptop-webcam,,high,100.00,Person in foreground wearing glasses and casual black shirt with no safety helmet visible on head,open
+VIO-2026-488,"22/6/2026, 12:28:20 pm",Gloves,ppe,laptop-webcam,,high,100.00,Person visible in center of frame with bare hands showing no safety gloves worn. Safety gloves are mandatory PPE in factory environments.,open
+VIO-2026-487,"22/6/2026, 12:28:20 pm",Safety Vest,ppe,laptop-webcam,,high,100.00,Person visible in center of frame wearing casual office clothing (dark shirt) with no safety vest worn. High-visibility safety vest is mandatory PPE in factory environments.,open
+VIO-2026-486,"22/6/2026, 12:28:20 pm",Helmet,ppe,laptop-webcam,,high,100.00,Person visible in center of frame wearing casual office clothing (dark shirt) with no safety helmet worn. Helmet is mandatory PPE in factory environments under Factories Act 1948.,open
+VIO-2026-485,"22/6/2026, 12:28:05 pm",Gloves,ppe,laptop-webcam,,high,100.00,Person's hands are visible and bare with no safety gloves worn. Both hands clearly exposed without protective gloves.,open
+VIO-2026-484,"22/6/2026, 12:28:05 pm",Safety Vest,ppe,laptop-webcam,,high,100.00,Person wearing only casual black shirt with no visible safety vest or reflective vest worn over torso.,open
+VIO-2026-483,"22/6/2026, 12:28:05 pm",Helmet,ppe,laptop-webcam,,high,100.00,Person visible in indoor factory/office space wearing glasses and casual black shirt. No safety helmet is worn on head.,open
+VIO-2026-482,"22/6/2026, 12:27:50 pm",Gloves,ppe,laptop-webcam,,high,100.00,Person's hands are clearly visible with no safety gloves worn. Hands are bare and unprotected.,open
+VIO-2026-481,"22/6/2026, 12:27:50 pm",Safety Vest,ppe,laptop-webcam,,high,100.00,Person wearing dark casual shirt with no safety vest visible. Required high-visibility safety vest is not worn.,open
+VIO-2026-480,"22/6/2026, 12:27:50 pm",Helmet,ppe,laptop-webcam,,high,100.00,Person in office/indoor setting wearing casual shirt and glasses. No safety helmet is visible or worn.,open
+VIO-2026-479,"22/6/2026, 12:27:35 pm",Gloves,ppe,laptop-webcam,,high,100.00,Hands and wrists clearly visible with NO safety gloves worn,open
+VIO-2026-478,"22/6/2026, 12:27:35 pm",Safety Vest,ppe,laptop-webcam,,high,95.00,Person wearing dark casual shirt/clothing with NO visible safety vest or high-visibility protective vest,open
+VIO-2026-477,"22/6/2026, 12:27:35 pm",Helmet,ppe,laptop-webcam,,high,95.00,Person in office/casual environment wearing glasses but NO safety helmet visible on head,open
+VIO-2026-476,"22/6/2026, 12:27:20 pm",Gloves,ppe,laptop-webcam,,high,100.00,Person's hands are clearly visible and bare. No safety gloves are worn. Gloves are mandatory PPE for factory work.,open
+VIO-2026-475,"22/6/2026, 12:27:20 pm",Safety Vest,ppe,laptop-webcam,,high,98.00,Person wearing dark colored casual office shirt. No high-visibility safety vest is clearly visible or worn. Safety vest is mandatory PPE in factory areas.,open
+VIO-2026-474,"22/6/2026, 12:27:20 pm",Helmet,ppe,laptop-webcam,,high,95.00,Person in center-foreground wearing glasses and casual office shirt with no safety helmet visible on head. Helmet is a mandatory PPE item in factory environments.,open
+VIO-2026-473,"22/6/2026, 12:27:05 pm",Gloves,ppe,laptop-webcam,,critical,100.00,Person's hands are fully visible with no protective gloves worn. Safety gloves are mandatory PPE in factory environment.,open
+VIO-2026-472,"22/6/2026, 12:27:05 pm",Safety Vest,ppe,laptop-webcam,,critical,100.00,Person wearing dark colored casual shirt only. No high-visibility safety vest is worn. Safety vest is mandatory PPE in factory environment.,open
+VIO-2026-471,"22/6/2026, 12:27:05 pm",Helmet,ppe,laptop-webcam,,critical,100.00,Person in center of frame wearing glasses and casual clothing. No safety helmet is visible on head. Helmet is mandatory PPE in factory environment.,open
+VIO-2026-470,"22/6/2026, 12:26:50 pm",Gloves,ppe,laptop-webcam,,high,100.00,Person's hands are clearly visible. No safety gloves are worn on either hand.,open
+VIO-2026-469,"22/6/2026, 12:26:50 pm",Safety Vest,ppe,laptop-webcam,,high,100.00,Person visible in center of frame wearing only a dark casual shirt. No safety vest (high-visibility vest) is worn or visible.,open
+VIO-2026-468,"22/6/2026, 12:26:50 pm",Helmet,ppe,laptop-webcam,,high,100.00,Person visible in center of frame wearing casual office clothing (shirt). No safety helmet is worn or visible on head.,open
+VIO-2026-467,"22/6/2026, 12:26:35 pm",Gloves,ppe,laptop-webcam,,high,100.00,Person's hands are clearly visible and bare. No safety gloves are worn on either hand.,open
+VIO-2026-466,"22/6/2026, 12:26:35 pm",Safety Vest,ppe,laptop-webcam,,high,95.00,Person wearing only casual shirt with no visible safety vest. Required high-visibility safety vest is not worn.,open
+VIO-2026-465,"22/6/2026, 12:26:35 pm",Helmet,ppe,laptop-webcam,,high,95.00,Person in office/indoor setting wearing casual shirt and glasses. No safety helmet is visible on head.,open
+VIO-2026-464,"22/6/2026, 12:26:20 pm",Gloves,ppe,laptop-webcam,,high,100.00,Person's hands are clearly visible and bare. No safety gloves are worn on either hand.,open
+VIO-2026-463,"22/6/2026, 12:26:20 pm",Safety Vest,ppe,laptop-webcam,,high,100.00,Person visible wearing only dark casual shirt. No high-visibility safety vest is worn over clothing.,open
+VIO-2026-462,"22/6/2026, 12:26:20 pm",Helmet,ppe,laptop-webcam,,high,100.00,Person visible in center of frame wearing casual office clothing (dark shirt). No safety helmet is worn on head.,open
+VIO-2026-461,"22/6/2026, 12:26:05 pm",Gloves,ppe,laptop-webcam,,high,100.00,Person's hands are visible and bare. No safety gloves of any type are worn.,open
+VIO-2026-460,"22/6/2026, 12:26:05 pm",Safety Vest,ppe,laptop-webcam,,critical,100.00,Person wearing casual office shirt (appears to be light colored button-up shirt). No high-visibility safety vest is worn or visible.,open
+VIO-2026-459,"22/6/2026, 12:26:05 pm",Helmet,ppe,laptop-webcam,,critical,100.00,Person visible in office/factory setting wearing casual shirt and glasses. No safety helmet is worn or visible on head.,open
+VIO-2026-458,"22/6/2026, 12:25:50 pm",Gloves,ppe,laptop-webcam,,high,90.00,Person's hands are visible and bare. No safety gloves are worn on either hand.,open
+VIO-2026-457,"22/6/2026, 12:25:50 pm",Safety Vest,ppe,laptop-webcam,,high,95.00,Person wearing dark colored shirt/casual clothing. No safety vest or high-visibility vest is clearly visible.,open
+VIO-2026-456,"22/6/2026, 12:25:50 pm",Helmet,ppe,laptop-webcam,,high,95.00,Person in office/indoor setting wearing casual shirt and glasses. No safety helmet is visible on head.,open
+VIO-2026-455,"22/6/2026, 12:25:35 pm",Gloves,ppe,laptop-webcam,,high,100.00,Person's hands visible with no safety gloves worn; bare hands exposed,open
+VIO-2026-454,"22/6/2026, 12:25:35 pm",Safety Vest,ppe,laptop-webcam,,high,100.00,Person wearing dark casual shirt with no high-visibility safety vest or reflective safety clothing visible,open
+VIO-2026-453,"22/6/2026, 12:25:35 pm",Helmet,ppe,laptop-webcam,,high,100.00,Person in center-foreground wearing casual office clothing (dark shirt) with no hard hat or safety helmet visible on head,open
+VIO-2026-452,"22/6/2026, 12:25:20 pm",Gloves,ppe,laptop-webcam,,high,95.00,"Person on right side has visible bare hands and wrist with bracelet, NO gloves worn",open
+VIO-2026-451,"22/6/2026, 12:25:20 pm",Safety Vest,ppe,laptop-webcam,,high,90.00,Person on right side wearing blue casual clothing with NO safety vest visible,open
+VIO-2026-450,"22/6/2026, 12:25:20 pm",Helmet,ppe,laptop-webcam,,high,90.00,Person on right side wearing blue casual clothing with NO helmet visible on head,open
+VIO-2026-449,"22/6/2026, 12:25:20 pm",Gloves,ppe,laptop-webcam,,high,95.00,Person on left side has visible bare hands with NO gloves worn,open
+VIO-2026-448,"22/6/2026, 12:25:20 pm",Safety Vest,ppe,laptop-webcam,,high,95.00,Person on left side wearing dark casual clothing with NO safety vest visible,open
+VIO-2026-447,"22/6/2026, 12:25:20 pm",Helmet,ppe,laptop-webcam,,high,95.00,Person on left side wearing dark casual clothing (appears to be shirt) with NO helmet visible on head,open
+VIO-2026-446,"22/6/2026, 12:25:08 pm",Gloves,ppe,laptop-webcam,,high,90.00,Person's hands are visible and bare with no safety gloves worn. Safety gloves are required PPE in factory environments.,open
+VIO-2026-445,"22/6/2026, 12:25:08 pm",Safety Vest,ppe,laptop-webcam,,high,95.00,"Person in casual office clothing (black shirt, jeans) with no safety vest visible. High-visibility safety vest is mandatory PPE in factory zones.",open
+VIO-2026-444,"22/6/2026, 12:25:08 pm",Helmet,ppe,laptop-webcam,,high,95.00,Person visible in foreground wearing casual office clothing (black shirt) with no safety helmet worn. Helmet is mandatory PPE in factory environments per Factories Act 1948.,open
+VIO-2026-443,"22/6/2026, 12:24:50 pm",Gloves,ppe,laptop-webcam,,high,100.00,"Person in center foreground with bare hands visible, no safety gloves worn.",open
+VIO-2026-442,"22/6/2026, 12:24:50 pm",Safety Vest,ppe,laptop-webcam,,high,100.00,Person in center foreground wearing dark casual shirt with no high-visibility safety vest visible.,open
+VIO-2026-441,"22/6/2026, 12:24:50 pm",Helmet,ppe,laptop-webcam,,high,100.00,Person in center foreground wearing casual office clothing (dark shirt) with no safety helmet visible on head.,open
+VIO-2026-440,"22/6/2026, 12:24:46 pm",Gloves,ppe,laptop-webcam,,high,100.00,Both hands visible - bare hands with no safety gloves or hand protection equipment worn,open
+VIO-2026-439,"22/6/2026, 12:24:46 pm",Safety Vest,ppe,laptop-webcam,,critical,100.00,Person wearing light colored casual shirt (appears to be regular office/home clothing) with no safety vest or hi-visibility garment visible,open
+VIO-2026-438,"22/6/2026, 12:24:46 pm",Helmet,ppe,laptop-webcam,,critical,100.00,Person in foreground wearing casual shirt and glasses with no hard hat or safety helmet visible on head,open
+VIO-2026-437,"22/6/2026, 12:24:34 pm",Gloves,ppe,laptop-webcam,,high,100.00,"Person visible in center of frame with bare hands, no safety gloves worn",open
+VIO-2026-436,"22/6/2026, 12:24:34 pm",Safety Vest,ppe,laptop-webcam,,high,100.00,Person visible in center of frame wearing casual office clothing with no safety vest or high-visibility vest worn,open
+VIO-2026-435,"22/6/2026, 12:24:34 pm",Helmet,ppe,laptop-webcam,,high,100.00,Person visible in center of frame wearing casual office clothing (black shirt) with no safety helmet worn on head,open
+VIO-2026-434,"22/6/2026, 12:24:25 pm",Safety Vest,ppe,laptop-webcam,,critical,90.00,Person visible in background - NO safety vest visible or worn,open
+VIO-2026-433,"22/6/2026, 12:24:25 pm",Helmet,ppe,laptop-webcam,,critical,90.00,Person visible in background wearing casual clothing - NO safety helmet visible or worn,open
+VIO-2026-432,"22/6/2026, 12:24:25 pm",Gloves,ppe,laptop-webcam,,high,90.00,Person in foreground - NO safety gloves visible on hands,open
+VIO-2026-431,"22/6/2026, 12:24:25 pm",Safety Vest,ppe,laptop-webcam,,critical,95.00,Person in foreground wearing light colored casual shirt - NO safety vest visible or worn,open
+VIO-2026-430,"22/6/2026, 12:24:25 pm",Helmet,ppe,laptop-webcam,,critical,95.00,Person in foreground wearing casual office shirt and glasses - NO safety helmet visible or worn,open
+VIO-2026-429,"22/6/2026, 12:24:20 pm",Gloves,ppe,laptop-webcam,,high,100.00,Person's hands are clearly visible and unprotected. No safety gloves worn on either hand. Required PPE not present.,open
+VIO-2026-428,"22/6/2026, 12:24:20 pm",Safety Vest,ppe,laptop-webcam,,high,100.00,Person wearing dark/black casual clothing. No high-visibility safety vest worn over torso. Required PPE not visible.,open
+VIO-2026-427,"22/6/2026, 12:24:20 pm",Helmet,ppe,laptop-webcam,,high,100.00,Person in foreground wearing glasses and casual black shirt. No safety helmet visible on head. Required PPE not worn.,open
+VIO-2026-426,"22/6/2026, 12:24:05 pm",Gloves,ppe,laptop-webcam,,high,100.00,Person's hands are clearly visible and bare. No safety gloves are worn on either hand. Gloves are required PPE in factory environment.,open
+VIO-2026-425,"22/6/2026, 12:24:05 pm",Safety Vest,ppe,laptop-webcam,,critical,100.00,Person wearing black casual shirt with no safety vest visible. High-visibility safety vest is mandatory PPE in factory areas.,open
+VIO-2026-424,"22/6/2026, 12:24:05 pm",Helmet,ppe,laptop-webcam,,critical,100.00,Person in center of frame wearing casual office clothing (black shirt) with no safety helmet visible on head. Helmet is mandatory PPE in factory environment.,open
+VIO-2026-423,"22/6/2026, 12:23:52 pm",Safety Vest,ppe,laptop-webcam,,high,80.00,Partial person visible on right side wearing light-colored casual shirt. No safety vest clearly visible.,open
+VIO-2026-422,"22/6/2026, 12:23:52 pm",Helmet,ppe,laptop-webcam,,high,85.00,Partial person visible on right side of frame wearing casual light-colored shirt. No safety helmet visible.,open
+VIO-2026-421,"22/6/2026, 12:23:52 pm",Gloves,ppe,laptop-webcam,,high,95.00,Male person in center-foreground. Hands and fingers are fully visible and bare. No safety gloves are worn.,open
+VIO-2026-420,"22/6/2026, 12:23:52 pm",Safety Vest,ppe,laptop-webcam,,high,90.00,Male person in center-foreground wearing dark casual jacket/shirt. No safety vest or high-visibility vest clearly visible.,open
+VIO-2026-419,"22/6/2026, 12:23:52 pm",Helmet,ppe,laptop-webcam,,high,95.00,Male person in center-foreground wearing glasses and casual shirt. No safety helmet visible on head.,open
+VIO-2026-418,"22/6/2026, 12:23:39 pm",Gloves,ppe,laptop-webcam,,high,100.00,"Person in background (younger male with beard, glasses) not wearing safety gloves. Bare hands visible.",open
+VIO-2026-417,"22/6/2026, 12:23:39 pm",Safety Vest,ppe,laptop-webcam,,critical,100.00,"Person in background (younger male with beard, glasses) not wearing safety vest. Only casual light-colored long-sleeve shirt visible.",open
+VIO-2026-416,"22/6/2026, 12:23:39 pm",Helmet,ppe,laptop-webcam,,critical,100.00,"Person in background (younger male with beard, glasses) not wearing safety helmet. Head is completely unprotected.",open
+VIO-2026-415,"22/6/2026, 12:23:39 pm",Gloves,ppe,laptop-webcam,,high,100.00,Person in foreground (older male with glasses) not wearing safety gloves. Bare hands visible.,open
+VIO-2026-414,"22/6/2026, 12:23:39 pm",Safety Vest,ppe,laptop-webcam,,critical,100.00,Person in foreground (older male with glasses) not wearing safety vest. Only casual black shirt visible.,open
+VIO-2026-413,"22/6/2026, 12:23:39 pm",Helmet,ppe,laptop-webcam,,critical,100.00,Person in foreground (older male with glasses) not wearing safety helmet. Head is completely unprotected.,open
+VIO-2026-412,"22/6/2026, 12:23:20 pm",Safety Vest,ppe,laptop-webcam,,critical,85.00,Partial person on right side wearing light colored clothing with no visible safety vest,open
+VIO-2026-411,"22/6/2026, 12:23:20 pm",Helmet,ppe,laptop-webcam,,critical,85.00,"Partial person visible on right side with dark hair, no helmet visible",open
+VIO-2026-410,"22/6/2026, 12:23:20 pm",Gloves,ppe,laptop-webcam,,high,90.00,"Person in center-foreground with bare hands visible, no safety gloves worn",open
+VIO-2026-409,"22/6/2026, 12:23:20 pm",Safety Vest,ppe,laptop-webcam,,critical,95.00,Person in center-foreground wearing only black shirt with no safety vest visible,open
+VIO-2026-408,"22/6/2026, 12:23:20 pm",Helmet,ppe,laptop-webcam,,critical,95.00,Person in center-foreground wearing casual office clothing (black shirt) with no helmet visible on head,open
+VIO-2026-407,"22/6/2026, 12:23:07 pm",Safety Vest,ppe,laptop-webcam,,critical,95.00,Person on right side is NOT wearing a visible safety vest or high-visibility clothing.,open
+VIO-2026-406,"22/6/2026, 12:23:07 pm",Helmet,ppe,laptop-webcam,,critical,95.00,Person partially visible on right side wearing casual light-colored shirt is NOT wearing a safety helmet.,open
+VIO-2026-405,"22/6/2026, 12:23:07 pm",Gloves,ppe,laptop-webcam,,critical,100.00,Person in center-foreground has bare hands visible with no safety gloves worn. Hands are completely unprotected.,open
+VIO-2026-404,"22/6/2026, 12:23:07 pm",Safety Vest,ppe,laptop-webcam,,critical,100.00,Person in center-foreground wearing black jacket over casual clothing is NOT wearing a visible safety vest. No high-visibility vest detected.,open
+VIO-2026-403,"22/6/2026, 12:23:07 pm",Helmet,ppe,laptop-webcam,,critical,100.00,Person in center-foreground wearing glasses and casual shirt is NOT wearing a safety helmet. Head is completely unprotected.,open
+VIO-2026-402,"22/6/2026, 12:22:52 pm",Safety Vest,ppe,laptop-webcam,,high,85.00,Person on right side wearing light casual shirt. No safety vest is visibly worn.,open
+VIO-2026-401,"22/6/2026, 12:22:52 pm",Helmet,ppe,laptop-webcam,,high,85.00,Person on right side partially visible wearing light colored shirt. No safety helmet is visibly worn.,open
+VIO-2026-400,"22/6/2026, 12:22:52 pm",Gloves,ppe,laptop-webcam,,high,90.00,Person in center has bare hands visible. No safety gloves are worn.,open
+VIO-2026-399,"22/6/2026, 12:22:52 pm",Safety Vest,ppe,laptop-webcam,,high,95.00,Person in center wearing dark casual shirt. No safety vest is visibly worn over torso.,open
+VIO-2026-398,"22/6/2026, 12:22:52 pm",Helmet,ppe,laptop-webcam,,high,95.00,Person in center wearing glasses and casual clothing (dark shirt). No safety helmet is visibly worn on head.,open
+VIO-2026-397,"22/6/2026, 12:22:35 pm",Safety Vest,ppe,laptop-webcam,,critical,90.00,Person on right side wearing light shirt - NO safety vest clearly visible,open
+VIO-2026-396,"22/6/2026, 12:22:35 pm",Helmet,ppe,laptop-webcam,,critical,90.00,Person on right side wearing light colored shirt - NO helmet visible,open
+VIO-2026-395,"22/6/2026, 12:22:35 pm",Gloves,ppe,laptop-webcam,,critical,95.00,Man in center with hands visible - NO gloves worn,open
+VIO-2026-394,"22/6/2026, 12:22:35 pm",Safety Vest,ppe,laptop-webcam,,critical,95.00,Man in center wearing dark jacket and light shirt - NO safety vest clearly visible,open
+VIO-2026-393,"22/6/2026, 12:22:35 pm",Helmet,ppe,laptop-webcam,,critical,95.00,"Man in center wearing glasses and casual clothing (dark jacket, light shirt) - NO helmet visible on head",open
+VIO-2026-392,"22/6/2026, 12:22:20 pm",Gloves,ppe,laptop-webcam,,high,100.00,Person on right side has exposed hands with no safety gloves visible,open
+VIO-2026-391,"22/6/2026, 12:22:20 pm",Safety Vest,ppe,laptop-webcam,,high,100.00,Person on right side wearing casual shirt is NOT wearing a visible safety vest,open
+VIO-2026-390,"22/6/2026, 12:22:20 pm",Helmet,ppe,laptop-webcam,,high,100.00,Person on right side of frame wearing casual light-colored shirt is NOT wearing a safety helmet,open
+VIO-2026-389,"22/6/2026, 12:22:20 pm",Gloves,ppe,laptop-webcam,,high,100.00,Person in center-left has exposed hands with no safety gloves visible,open
+VIO-2026-388,"22/6/2026, 12:22:20 pm",Safety Vest,ppe,laptop-webcam,,high,100.00,Person in center-left wearing black jacket and casual shirt is NOT wearing a visible safety vest,open
+VIO-2026-387,"22/6/2026, 12:22:20 pm",Helmet,ppe,laptop-webcam,,high,100.00,Person in center-left wearing glasses and casual shirt is NOT wearing a safety helmet,open
+VIO-2026-386,"22/6/2026, 12:22:06 pm",Safety Vest,ppe,laptop-webcam,,critical,95.00,Person in right background wearing light blue shirt - NO high-visibility safety vest clearly visible,open
+VIO-2026-385,"22/6/2026, 12:22:06 pm",Helmet,ppe,laptop-webcam,,critical,95.00,Person in right background wearing light blue shirt - NO safety helmet visible,open
+VIO-2026-384,"22/6/2026, 12:22:06 pm",Gloves,ppe,laptop-webcam,,high,100.00,Person in center foreground - hands and fingers visible with NO safety gloves worn,open
+VIO-2026-383,"22/6/2026, 12:22:06 pm",Safety Vest,ppe,laptop-webcam,,critical,100.00,Person in center foreground wearing dark casual clothing (black shirt/jacket) - NO high-visibility safety vest clearly visible,open
+VIO-2026-382,"22/6/2026, 12:22:06 pm",Helmet,ppe,laptop-webcam,,critical,100.00,Person in center foreground wearing glasses and casual shirt - NO safety helmet visible on head,open
+VIO-2026-381,"22/6/2026, 12:21:51 pm",Gloves,ppe,laptop-webcam,,high,96.00,Person on right side has visible bare hands. No safety gloves worn.,open
+VIO-2026-380,"22/6/2026, 12:21:51 pm",Safety Vest,ppe,laptop-webcam,,high,95.00,Person on right side in casual light colored shirt. No safety vest worn.,open
+VIO-2026-379,"22/6/2026, 12:21:51 pm",Helmet,ppe,laptop-webcam,,high,98.00,Person on right side wearing light colored shirt. NO safety helmet visible on head.,open
+VIO-2026-378,"22/6/2026, 12:21:51 pm",Gloves,ppe,laptop-webcam,,high,92.00,Person in center-foreground has bare hands visible. No safety gloves worn.,open
+VIO-2026-377,"22/6/2026, 12:21:51 pm",Safety Vest,ppe,laptop-webcam,,high,90.00,Person in center-foreground wearing black jacket over casual clothing. No safety vest clearly visible.,open
+VIO-2026-376,"22/6/2026, 12:21:51 pm",Helmet,ppe,laptop-webcam,,high,95.00,Person in center-foreground wearing glasses but NO safety helmet visible. Required PPE not worn.,open
+VIO-2026-375,"22/6/2026, 12:21:35 pm",Gloves,ppe,laptop-webcam,,critical,90.00,Person on right - no safety gloves visible on hands,open
+VIO-2026-374,"22/6/2026, 12:21:35 pm",Safety Vest,ppe,laptop-webcam,,critical,95.00,Person on right wearing light colored casual shirt - no high-visibility safety vest visible,open
+VIO-2026-373,"22/6/2026, 12:21:35 pm",Helmet,ppe,laptop-webcam,,critical,95.00,Person on right wearing light colored shirt - no safety helmet visible,open
+VIO-2026-372,"22/6/2026, 12:21:35 pm",Gloves,ppe,laptop-webcam,,critical,90.00,Person in center-left - no safety gloves visible on hands,open
+VIO-2026-371,"22/6/2026, 12:21:35 pm",Safety Vest,ppe,laptop-webcam,,critical,95.00,Person in center-left wearing black jacket - no high-visibility safety vest clearly visible,open
+VIO-2026-370,"22/6/2026, 12:21:35 pm",Helmet,ppe,laptop-webcam,,critical,95.00,Person in center-left wearing glasses and casual black jacket - no safety helmet visible,open
+VIO-2026-369,"22/6/2026, 12:21:21 pm",Gloves,ppe,laptop-webcam,,high,100.00,Person's hands are clearly visible and bare. No safety gloves are worn. Gloves are mandatory PPE for factory floor work.,open
+VIO-2026-368,"22/6/2026, 12:21:21 pm",Safety Vest,ppe,laptop-webcam,,high,100.00,Person visible in factory setting wearing casual black shirt with NO safety vest or high-visibility vest worn. Safety vest is mandatory PPE and is not visible.,open
+VIO-2026-367,"22/6/2026, 12:21:21 pm",Helmet,ppe,laptop-webcam,,high,100.00,Person visible in indoor factory/plant setting wearing casual office clothing (black shirt) with NO safety helmet worn. Helmet is mandatory PPE and is not visible.,open
+VIO-2026-366,"22/6/2026, 12:21:05 pm",Gloves,ppe,laptop-webcam,,critical,100.00,Hands and fingers completely visible and unprotected. NO safety gloves worn on either hand.,open
+VIO-2026-365,"22/6/2026, 12:21:05 pm",Safety Vest,ppe,laptop-webcam,,critical,100.00,Person wearing black jacket only. NO high-visibility safety vest worn. Not visible anywhere on body.,open
+VIO-2026-364,"22/6/2026, 12:21:05 pm",Helmet,ppe,laptop-webcam,,critical,100.00,Person in center of frame wearing glasses but NO safety helmet visible. Head completely unprotected.,open
+VIO-2026-363,"22/6/2026, 12:20:49 pm",Gloves,ppe,laptop-webcam,,high,100.00,Person's hands are clearly visible and NO safety gloves are being worn.,open
+VIO-2026-362,"22/6/2026, 12:20:49 pm",Safety Vest,ppe,laptop-webcam,,critical,100.00,Person visible in factory/industrial setting with NO safety vest or high-visibility clothing worn over casual dark shirt.,open
+VIO-2026-361,"22/6/2026, 12:20:49 pm",Helmet,ppe,laptop-webcam,,critical,100.00,Person visible in factory/industrial setting wearing casual office clothing (dark shirt) with NO safety helmet worn on head.,open
+VIO-2026-360,"22/6/2026, 12:20:37 pm",Gloves,ppe,laptop-webcam,,high,100.00,Hands and fingers completely exposed with no safety gloves visible. No hand protection worn.,open
+VIO-2026-359,"22/6/2026, 12:20:37 pm",Safety Vest,ppe,laptop-webcam,,critical,100.00,Person wearing only black casual jacket/shirt. No high-visibility safety vest clearly visible.,open
+VIO-2026-358,"22/6/2026, 12:20:37 pm",Helmet,ppe,laptop-webcam,,critical,100.00,Person in factory/indoor work environment not wearing safety helmet. Head is completely unprotected.,open
+VIO-2026-357,"22/6/2026, 12:20:20 pm",Gloves,ppe,laptop-webcam,,high,100.00,Hands clearly visible with no safety gloves worn. Bare hands exposed in factory environment.,open
+VIO-2026-356,"22/6/2026, 12:20:20 pm",Safety Vest,ppe,laptop-webcam,,critical,98.00,Person wearing black jacket/casual clothing. No safety vest is clearly visible or worn.,open
+VIO-2026-355,"22/6/2026, 12:20:20 pm",Helmet,ppe,laptop-webcam,,critical,95.00,Person visible in factory environment wearing glasses but NO safety helmet is clearly visible on head,open
+VIO-2026-354,"22/6/2026, 12:20:05 pm",Gloves,ppe,laptop-webcam,,high,100.00,Person's hands are clearly visible and exposed. No safety gloves are worn.,open
+VIO-2026-353,"22/6/2026, 12:20:05 pm",Safety Vest,ppe,laptop-webcam,,critical,100.00,Person wearing black jacket and casual clothing. No high-visibility safety vest is clearly visible or worn.,open
+VIO-2026-352,"22/6/2026, 12:20:05 pm",Helmet,ppe,laptop-webcam,,critical,100.00,"Person visible in factory/industrial setting wearing glasses and casual clothing (black jacket, shirt). No safety helmet is worn on head.",open
+VIO-2026-351,"22/6/2026, 12:19:50 pm",Gloves,ppe,laptop-webcam,,high,100.00,Person's hands are bare with no safety gloves visible. Bare hands exposed in industrial setting.,open
+VIO-2026-350,"22/6/2026, 12:19:50 pm",Safety Vest,ppe,laptop-webcam,,critical,100.00,Person wearing only casual black shirt with no safety vest visible. High-visibility vest is not worn.,open
+VIO-2026-349,"22/6/2026, 12:19:50 pm",Helmet,ppe,laptop-webcam,,critical,100.00,Person visible in factory/industrial setting wearing casual black shirt without safety helmet. Head is completely unprotected.,open
+VIO-2026-348,"22/6/2026, 12:19:35 pm",Gloves,ppe,laptop-webcam,,high,100.00,Person in factory setting with bare hands visible. No safety gloves worn on either hand. Hands completely unprotected.,open
+VIO-2026-347,"22/6/2026, 12:19:35 pm",Safety Vest,ppe,laptop-webcam,,critical,100.00,Person in factory environment wearing only casual black jacket over shirt. No high-visibility safety vest worn. Not compliant with Factories Act 1948 requirement.,open
+VIO-2026-346,"22/6/2026, 12:19:35 pm",Helmet,ppe,laptop-webcam,,critical,100.00,"Person visible in factory/industrial setting wearing only casual office clothing (black jacket, shirt) with no safety helmet worn. Head completely unprotected.",open
+VIO-2026-345,"22/6/2026, 12:19:20 pm",Gloves,ppe,laptop-webcam,,high,100.00,Person's hands are clearly visible and bare. No safety gloves are worn.,open
+VIO-2026-344,"22/6/2026, 12:19:20 pm",Safety Vest,ppe,laptop-webcam,,critical,100.00,Person is wearing black casual shirt only. No safety vest or high-visibility vest is worn over clothing.,open
+VIO-2026-343,"22/6/2026, 12:19:20 pm",Helmet,ppe,laptop-webcam,,critical,100.00,Person visible in center of frame wearing casual office clothing (black shirt). No safety helmet is worn or visible on head.,open
+VIO-2026-342,"22/6/2026, 12:19:06 pm",Helmet,ppe,laptop-webcam,,critical,90.00,"Background person (far right, partially visible) not wearing safety helmet",open
+VIO-2026-341,"22/6/2026, 12:19:06 pm",Safety Vest,ppe,laptop-webcam,,critical,100.00,Right person wearing casual light-colored shirt with no safety vest visible,open
+VIO-2026-340,"22/6/2026, 12:19:06 pm",Helmet,ppe,laptop-webcam,,critical,95.00,Right person (partial view) not wearing safety helmet,open
+VIO-2026-339,"22/6/2026, 12:19:06 pm",Gloves,ppe,laptop-webcam,,high,100.00,Center person has bare hands with no visible safety gloves,open
+VIO-2026-338,"22/6/2026, 12:19:06 pm",Safety Vest,ppe,laptop-webcam,,critical,100.00,Center person wearing dark jacket/casual clothing with no visible safety vest,open
+VIO-2026-337,"22/6/2026, 12:19:06 pm",Helmet,ppe,laptop-webcam,,critical,100.00,Center person (older male with glasses) not wearing safety helmet. Head is completely unprotected.,open
+VIO-2026-336,"22/6/2026, 12:18:50 pm",Safety Vest,ppe,laptop-webcam,,critical,95.00,Person visible on right side wearing light colored shirt but no safety vest visible.,open
+VIO-2026-335,"22/6/2026, 12:18:50 pm",Helmet,ppe,laptop-webcam,,critical,95.00,Person visible on right side of frame wearing casual clothing with no safety helmet visible.,open
+VIO-2026-334,"22/6/2026, 12:18:50 pm",Gloves,ppe,laptop-webcam,,high,100.00,Person in center foreground has bare hands visible with no safety gloves worn.,open
+VIO-2026-333,"22/6/2026, 12:18:50 pm",Safety Vest,ppe,laptop-webcam,,critical,100.00,Person in center foreground wearing black shirt/jacket but no safety vest visible. High-visibility vest not worn.,open
+VIO-2026-332,"22/6/2026, 12:18:50 pm",Helmet,ppe,laptop-webcam,,critical,100.00,Person in center foreground wearing glasses but no safety helmet visible. Head completely unprotected.,open
+VIO-2026-331,"22/6/2026, 12:18:36 pm",Gloves,ppe,laptop-webcam,,high,90.00,Person on right side - hands visible with NO safety gloves worn,open
+VIO-2026-330,"22/6/2026, 12:18:36 pm",Safety Vest,ppe,laptop-webcam,,high,95.00,Person on right side wearing casual light shirt - NO safety vest clearly visible,open
+VIO-2026-329,"22/6/2026, 12:18:36 pm",Helmet,ppe,laptop-webcam,,high,95.00,Person on right side wearing light colored casual shirt - NO safety helmet visible,open
+VIO-2026-328,"22/6/2026, 12:18:36 pm",Gloves,ppe,laptop-webcam,,high,90.00,Person in center-foreground - hands visible with NO safety gloves worn,open
+VIO-2026-327,"22/6/2026, 12:18:36 pm",Safety Vest,ppe,laptop-webcam,,high,95.00,Person in center-foreground wearing black jacket over casual clothing - NO safety vest clearly visible,open
+VIO-2026-326,"22/6/2026, 12:18:36 pm",Helmet,ppe,laptop-webcam,,high,95.00,Person in center-foreground wearing glasses but NO safety helmet visible on head,open
+VIO-2026-325,"22/6/2026, 12:18:20 pm",Gloves,ppe,laptop-webcam,,high,100.00,Person on right side - NO gloves visible on hands,open
+VIO-2026-324,"22/6/2026, 12:18:20 pm",Safety Vest,ppe,laptop-webcam,,critical,100.00,Person on right side wearing only casual light shirt - NO safety vest visible,open
+VIO-2026-323,"22/6/2026, 12:18:20 pm",Helmet,ppe,laptop-webcam,,critical,100.00,Person on right side wearing casual light colored shirt and glasses - NO helmet visible on head,open
+VIO-2026-322,"22/6/2026, 12:18:20 pm",Gloves,ppe,laptop-webcam,,high,100.00,Person in center-foreground - NO gloves visible on hands,open
+VIO-2026-321,"22/6/2026, 12:18:20 pm",Safety Vest,ppe,laptop-webcam,,critical,100.00,Person in center-foreground wearing only casual black jacket - NO safety vest visible,open
+VIO-2026-320,"22/6/2026, 12:18:20 pm",Helmet,ppe,laptop-webcam,,critical,100.00,Person in center-foreground wearing glasses and casual black jacket - NO helmet visible on head,open
+VIO-2026-319,"22/6/2026, 12:18:04 pm",Gloves,ppe,laptop-webcam,,high,100.00,Person's bare hands visible with no safety gloves worn or visible on either hand,open
+VIO-2026-318,"22/6/2026, 12:18:04 pm",Safety Vest,ppe,laptop-webcam,,critical,95.00,Person visible in factory/industrial setting wearing casual white shirt with no safety vest worn or visible,open
+VIO-2026-317,"22/6/2026, 12:18:04 pm",Helmet,ppe,laptop-webcam,,critical,95.00,Person visible in factory/industrial setting wearing casual white shirt with no safety helmet worn or visible,open
+VIO-2026-316,"22/6/2026, 12:17:50 pm",Gloves,ppe,laptop-webcam,,high,82.00,Right background person - no gloves visible on hands,open
+VIO-2026-315,"22/6/2026, 12:17:50 pm",Safety Vest,ppe,laptop-webcam,,high,88.00,Right background person in casual shirt - no safety vest visible,open
+VIO-2026-314,"22/6/2026, 12:17:50 pm",Helmet,ppe,laptop-webcam,,high,92.00,Right background person wearing light colored shirt - NO safety helmet visible,open
+VIO-2026-313,"22/6/2026, 12:17:50 pm",Gloves,ppe,laptop-webcam,,high,85.00,Center person - no gloves visible on hands,open
+VIO-2026-312,"22/6/2026, 12:17:50 pm",Safety Vest,ppe,laptop-webcam,,high,90.00,Center person wearing black jacket - no safety vest clearly visible,open
+VIO-2026-311,"22/6/2026, 12:17:50 pm",Helmet,ppe,laptop-webcam,,high,95.00,Center person wearing glasses but NO safety helmet visible on head,open
+VIO-2026-310,"22/6/2026, 12:17:36 pm",Gloves,ppe,laptop-webcam,,high,100.00,Person on right side (younger male) has bare hands visible. No safety gloves are worn.,open
+VIO-2026-309,"22/6/2026, 12:17:36 pm",Safety Vest,ppe,laptop-webcam,,critical,100.00,Person on right side (younger male) is wearing only a white shirt. No safety vest is visible.,open
+VIO-2026-308,"22/6/2026, 12:17:36 pm",Helmet,ppe,laptop-webcam,,critical,100.00,Person on right side (younger male) is NOT wearing a safety helmet. Head is completely exposed.,open
+VIO-2026-307,"22/6/2026, 12:17:36 pm",Gloves,ppe,laptop-webcam,,high,100.00,Person in center-foreground (older male) has bare hands visible. No safety gloves are worn.,open
+VIO-2026-306,"22/6/2026, 12:17:36 pm",Safety Vest,ppe,laptop-webcam,,critical,100.00,Person in center-foreground (older male) is wearing only a black jacket. No safety vest is visible.,open
+VIO-2026-305,"22/6/2026, 12:17:36 pm",Helmet,ppe,laptop-webcam,,critical,100.00,Person in center-foreground (older male) is NOT wearing a safety helmet. Head is completely exposed.,open
+VIO-2026-304,"22/6/2026, 12:17:22 pm",Safety Vest,ppe,laptop-webcam,,critical,90.00,Right background person wearing light colored shirt (appears to be casual office wear). No safety vest visible.,open
+VIO-2026-303,"22/6/2026, 12:17:22 pm",Helmet,ppe,laptop-webcam,,critical,95.00,Right background person (partially visible) not clearly wearing safety helmet. Head protection not visible.,open
+VIO-2026-302,"22/6/2026, 12:17:22 pm",Gloves,ppe,laptop-webcam,,high,100.00,Center person's hands are completely visible and bare. No safety gloves are worn on either hand.,open
+VIO-2026-301,"22/6/2026, 12:17:22 pm",Safety Vest,ppe,laptop-webcam,,critical,100.00,Center person wearing black casual jacket/shirt. No high-visibility safety vest is worn over clothing.,open
+VIO-2026-300,"22/6/2026, 12:17:22 pm",Helmet,ppe,laptop-webcam,,critical,100.00,"Center person (male, middle-aged) not wearing safety helmet. Head is completely exposed with no head protection visible.",open
+VIO-2026-299,"22/6/2026, 12:17:05 pm",Gloves,ppe,laptop-webcam,,high,100.00,Person's hands are visible and bare with no protective gloves worn. Safety gloves are required PPE and are not visible.,open
+VIO-2026-298,"22/6/2026, 12:17:05 pm",Safety Vest,ppe,laptop-webcam,,high,100.00,Person in center frame wearing only casual black shirt. No high-visibility safety vest is worn. This is mandatory PPE not visible.,open
+VIO-2026-297,"22/6/2026, 12:17:05 pm",Helmet,ppe,laptop-webcam,,high,100.00,Person visible in center of frame wearing casual black shirt. No safety helmet is worn on head. This is a mandatory PPE violation in factory environment.,open
+VIO-2026-296,"22/6/2026, 12:16:50 pm",Gloves,ppe,laptop-webcam,,high,100.00,"Hands clearly visible with NO safety gloves, work gloves, or protective hand covering of any kind worn.",open
+VIO-2026-295,"22/6/2026, 12:16:50 pm",Safety Vest,ppe,laptop-webcam,,high,100.00,Person wearing casual black jacket in factory environment with NO visible high-visibility safety vest or reflective clothing.,open
+VIO-2026-294,"22/6/2026, 12:16:50 pm",Helmet,ppe,laptop-webcam,,high,100.00,"Person visible in indoor factory/facility setting wearing casual clothing (black jacket, shirt) with NO hard hat or safety helmet worn on head.",open
+VIO-2026-293,"22/6/2026, 12:16:35 pm",Gloves,ppe,laptop-webcam,,high,100.00,Hands clearly visible with NO safety gloves worn. Worker is unprotected for potential contact hazards.,open
+VIO-2026-292,"22/6/2026, 12:16:35 pm",Safety Vest,ppe,laptop-webcam,,critical,100.00,Person in industrial area wearing only black jacket - NO safety vest visible. High-visibility vest is mandatory but completely absent.,open
+VIO-2026-291,"22/6/2026, 12:16:35 pm",Helmet,ppe,laptop-webcam,,critical,100.00,"Person visible in factory/industrial setting wearing casual clothing (black jacket, glasses) with NO safety helmet worn. Head completely exposed.",open
+VIO-2026-290,"22/6/2026, 12:16:23 pm",Helmet,ppe,laptop-webcam,,critical,95.00,Partial person visible in right background - no safety helmet visible,open
+VIO-2026-289,"22/6/2026, 12:16:23 pm",Gloves,ppe,laptop-webcam,,high,100.00,Male person in center-foreground - hands visible with no safety gloves worn,open
+VIO-2026-288,"22/6/2026, 12:16:23 pm",Safety Vest,ppe,laptop-webcam,,critical,100.00,Male person in center-foreground wearing only black jacket over casual clothing - no safety vest visible,open
+VIO-2026-287,"22/6/2026, 12:16:23 pm",Helmet,ppe,laptop-webcam,,critical,100.00,Male person in center-foreground wearing glasses and casual black jacket - no safety helmet visible on head,open
+VIO-2026-286,"22/6/2026, 12:16:06 pm",Gloves,ppe,laptop-webcam,,high,96.00,Person in background-right has no gloves visible. Bare hands exposed in factory environment.,open
+VIO-2026-285,"22/6/2026, 12:16:06 pm",Safety Vest,ppe,laptop-webcam,,high,97.00,Person in background-right wearing light gray/white shirt and jeans. No safety vest visible. Person is in factory floor wearing casual office clothing without required safety vest.,open
+VIO-2026-284,"22/6/2026, 12:16:06 pm",Gloves,ppe,laptop-webcam,,high,98.00,Person in center-foreground has no gloves visible on hands. Bare hands exposed in factory environment where gloves are required PPE.,open
+VIO-2026-283,"22/6/2026, 12:16:06 pm",Safety Vest,ppe,laptop-webcam,,high,95.00,Person in center-foreground wearing blue hard hat and glasses but NO safety vest visible. Only wearing black jacket over dark clothing. Safety vest is mandatory and not worn.,open
+VIO-2026-282,"22/6/2026, 12:15:51 pm",Gloves,ppe,laptop-webcam,,high,92.00,Person on right (background) has no gloves visible on hands.,open
+VIO-2026-281,"22/6/2026, 12:15:51 pm",Safety Vest,ppe,laptop-webcam,,high,95.00,Person on right (background) wearing light colored casual shirt with NO safety vest visible.,open
+VIO-2026-280,"22/6/2026, 12:15:51 pm",Helmet,ppe,laptop-webcam,,high,98.00,Person on right (background) wearing light colored shirt with NO helmet visible on head.,open
+VIO-2026-279,"22/6/2026, 12:15:51 pm",Gloves,ppe,laptop-webcam,,high,90.00,Person on left wearing blue hard hat with no gloves visible on hands.,open
+VIO-2026-278,"22/6/2026, 12:15:51 pm",Safety Vest,ppe,laptop-webcam,,high,95.00,Person on left wearing blue hard hat but NO safety vest visible. Only black jacket worn over regular clothing.,open
+VIO-2026-277,"22/6/2026, 12:15:36 pm",Gloves,ppe,laptop-webcam,,high,90.00,Person on right showing no visible gloves.,open
+VIO-2026-276,"22/6/2026, 12:15:36 pm",Safety Vest,ppe,laptop-webcam,,high,95.00,Person on right wearing casual shirt with NO safety vest visible.,open
+VIO-2026-275,"22/6/2026, 12:15:36 pm",Helmet,ppe,laptop-webcam,,high,92.00,"Person on right (partially visible) wearing casual white/light colored shirt. NO helmet, safety vest, or gloves visible.",open
+VIO-2026-274,"22/6/2026, 12:15:36 pm",Gloves,ppe,laptop-webcam,,high,90.00,Person on left wearing blue helmet but NO gloves visible on hands.,open
+VIO-2026-273,"22/6/2026, 12:15:36 pm",Safety Vest,ppe,laptop-webcam,,high,95.00,Person on left wearing blue helmet and glasses but NO safety vest visible. Only wearing black jacket over casual clothing.,open
+VIO-2026-272,"22/6/2026, 12:15:21 pm",Gloves,ppe,laptop-webcam,,high,95.00,Person on right has bare hands visible. NO safety gloves worn.,open
+VIO-2026-271,"22/6/2026, 12:15:21 pm",Safety Vest,ppe,laptop-webcam,,critical,98.00,Person on right in casual office shirt and jeans. NO safety vest visible. Not wearing required PPE for factory floor.,open
+VIO-2026-270,"22/6/2026, 12:15:21 pm",Helmet,ppe,laptop-webcam,,critical,98.00,"Person on right wearing light colored casual shirt and jeans. NO hard hat, safety helmet, or head protection visible.",open
+VIO-2026-269,"22/6/2026, 12:15:21 pm",Gloves,ppe,laptop-webcam,,high,90.00,Person on left wearing hard hat but NO safety gloves visible on hands.,open
+VIO-2026-268,"22/6/2026, 12:15:21 pm",Safety Vest,ppe,laptop-webcam,,high,95.00,Person on left wearing blue hard hat but NO safety vest visible. Only black jacket worn over regular clothing.,open
+VIO-2026-267,"22/6/2026, 12:15:01 pm",Gloves,ppe,laptop-webcam,,high,100.00,Person in background right has no gloves visible.,open
+VIO-2026-266,"22/6/2026, 12:15:01 pm",Safety Vest,ppe,laptop-webcam,,high,90.00,Person visible in background right wearing light colored shirt and casual clothing with NO safety vest visible.,open
+VIO-2026-265,"22/6/2026, 12:15:01 pm",Gloves,ppe,laptop-webcam,,high,100.00,Person in foreground has no gloves visible on hands. Hands are bare and exposed.,open
+VIO-2026-264,"22/6/2026, 12:15:01 pm",Safety Vest,ppe,laptop-webcam,,high,95.00,"Person in foreground wearing blue hard hat and safety glasses, but NO safety vest is visible. Only wearing black jacket over casual clothing.",open
+VIO-2026-263,"22/6/2026, 12:14:23 pm",Gloves,ppe,laptop-webcam,,high,100.00,Person in right background has bare hands visible with no safety gloves.,open
+VIO-2026-262,"22/6/2026, 12:14:23 pm",Safety Vest,ppe,laptop-webcam,,critical,100.00,Person in right background wearing casual light colored shirt with no visible safety vest.,open
+VIO-2026-261,"22/6/2026, 12:14:23 pm",Helmet,ppe,laptop-webcam,,critical,100.00,Person in right background wearing light colored shirt is NOT wearing a safety helmet. Head completely exposed.,open
+VIO-2026-260,"22/6/2026, 12:14:23 pm",Gloves,ppe,laptop-webcam,,high,100.00,Person in center-foreground has bare hands visible with no safety gloves worn.,open
+VIO-2026-259,"22/6/2026, 12:14:23 pm",Safety Vest,ppe,laptop-webcam,,critical,100.00,Person in center-foreground wearing casual black jacket with no visible safety vest. Torso completely unprotected.,open
+VIO-2026-258,"22/6/2026, 12:14:23 pm",Helmet,ppe,laptop-webcam,,critical,100.00,Person in center-foreground wearing glasses and casual black jacket is NOT wearing a safety helmet. Head completely exposed.,open
+VIO-2026-257,"22/6/2026, 12:14:07 pm",Gloves,ppe,laptop-webcam,,high,80.00,Right person's visible hand shows no safety gloves,open
+VIO-2026-256,"22/6/2026, 12:14:07 pm",Safety Vest,ppe,laptop-webcam,,critical,85.00,"Right person wearing light colored casual shirt only, no high-visibility safety vest",open
+VIO-2026-255,"22/6/2026, 12:14:07 pm",Helmet,ppe,laptop-webcam,,critical,85.00,Right person (partially visible) wearing casual shirt and glasses but no safety helmet,open
+VIO-2026-254,"22/6/2026, 12:14:07 pm",Gloves,ppe,laptop-webcam,,high,95.00,Center person's hands clearly visible with no safety gloves worn,open
+VIO-2026-253,"22/6/2026, 12:14:07 pm",Safety Vest,ppe,laptop-webcam,,critical,90.00,"Center person wearing black jacket only, no high-visibility safety vest clearly visible",open
+VIO-2026-252,"22/6/2026, 12:14:07 pm",Helmet,ppe,laptop-webcam,,critical,95.00,Center person wearing glasses but no safety helmet visible on head,open
+VIO-2026-251,"22/6/2026, 12:13:47 pm",Gloves,ppe,laptop-webcam,,high,100.00,Person's hands visible with no safety gloves worn,open
+VIO-2026-250,"22/6/2026, 12:13:47 pm",Safety Vest,ppe,laptop-webcam,,high,100.00,Person wearing casual black shirt with no high-visibility safety vest worn over clothing,open
+VIO-2026-249,"22/6/2026, 12:13:47 pm",Helmet,ppe,laptop-webcam,,high,100.00,Person in center/foreground wearing casual office attire (black shirt) with no safety helmet visible on head,open
+VIO-2026-248,"22/6/2026, 12:13:20 pm",Gloves,ppe,laptop-webcam,,high,95.00,Person on right side has bare hands visible - no safety gloves worn,open
+VIO-2026-247,"22/6/2026, 12:13:20 pm",Safety Vest,ppe,laptop-webcam,,critical,100.00,Person on right side wearing light colored casual shirt - no high-visibility safety vest visible,open
+VIO-2026-246,"22/6/2026, 12:13:20 pm",Helmet,ppe,laptop-webcam,,critical,100.00,Person visible on right side wearing casual shirt - no safety helmet visible or worn,open
+VIO-2026-245,"22/6/2026, 12:13:20 pm",Gloves,ppe,laptop-webcam,,high,95.00,Person in center-foreground has bare hands visible - no safety gloves worn,open
+VIO-2026-244,"22/6/2026, 12:13:20 pm",Safety Vest,ppe,laptop-webcam,,critical,100.00,Person in center-foreground wearing black jacket over casual clothing - no high-visibility safety vest clearly visible or worn,open
+VIO-2026-243,"22/6/2026, 12:13:20 pm",Helmet,ppe,laptop-webcam,,critical,100.00,Person in center-foreground wearing glasses and casual black jacket - no safety helmet visible or worn,open
+VIO-2026-242,"22/6/2026, 12:12:50 pm",Helmet,ppe,laptop-webcam,,critical,95.00,Person on right side of frame partially visible wearing white clothing - NO hard hat or safety helmet visible,open
+VIO-2026-241,"22/6/2026, 12:12:50 pm",Gloves,ppe,laptop-webcam,,high,97.00,Person in center has bare hands visible - NO safety gloves worn,open
+VIO-2026-240,"22/6/2026, 12:12:50 pm",Safety Vest,ppe,laptop-webcam,,critical,99.00,Person in center wearing black casual jacket - NO high-visibility safety vest worn over clothing,open
+VIO-2026-239,"22/6/2026, 12:12:50 pm",Helmet,ppe,laptop-webcam,,critical,98.00,Person in center of frame wearing glasses and casual black jacket - NO hard hat or safety helmet visible on head,open
+VIO-2026-238,"22/6/2026, 12:11:52 pm",Gloves,ppe,laptop-webcam,,high,100.00,Person's hands are visible and bare. No safety gloves are being worn. Gloves are mandatory PPE for factory work.,open
+VIO-2026-237,"22/6/2026, 12:11:52 pm",Safety Vest,ppe,laptop-webcam,,high,100.00,Person is wearing only a black casual shirt. No safety vest or high-visibility vest is worn. Safety vest is mandatory PPE in factory environment.,open
+VIO-2026-236,"22/6/2026, 12:11:52 pm",Helmet,ppe,laptop-webcam,,high,100.00,Person visible in center frame wearing glasses and casual black shirt. No safety helmet is worn on head. Helmet is mandatory PPE in factory environment.,open
+VIO-2026-235,"22/6/2026, 12:10:40 pm",Gloves,ppe,laptop-webcam,,high,100.00,Person's hands are visible and unprotected. No safety gloves are worn on either hand.,open
+VIO-2026-234,"22/6/2026, 12:10:40 pm",Safety Vest,ppe,laptop-webcam,,high,100.00,Person wearing dark/black casual clothing (appears to be shirt or jacket) with NO visible safety vest. Required high-visibility safety vest is absent.,open
+VIO-2026-233,"22/6/2026, 12:10:40 pm",Helmet,ppe,laptop-webcam,,high,100.00,Person visible in center-foreground wearing glasses but NO safety helmet. Helmet is not worn or visible.,open
+VIO-2026-229,"9/6/2026, 10:41:56 am",Helmet,ppe,laptop-webcam,,critical,100.00,Person visible in indoor factory setting wearing casual clothing (checkered shirt) with NO helmet clearly visible on head or body. Head is completely unprotected.,open
+VIO-2026-228,"8/6/2026, 12:58:57 pm",Safety Boots,ppe,laptop-webcam,,high,90.00,Person in background-left side of frame - feet and lower body not visible in frame. Safety boots cannot be confirmed as worn. Person in casual clothing without confirmed safety footwear in factory environment.,open
+VIO-2026-227,"8/6/2026, 12:58:57 pm",Safety Boots,ppe,laptop-webcam,,high,95.00,Person in center-foreground wearing white shirt and glasses - feet/lower legs not visible in frame. Safety boots cannot be confirmed as worn. Person appears to be in factory/industrial setting without clearly visible safety footwear.,open
+VIO-2026-226,"8/6/2026, 12:58:42 pm",Safety Boots,ppe,laptop-webcam,,high,85.00,"Person on left side of frame partially visible - feet/lower legs NOT clearly visible in frame, safety boots cannot be confirmed as worn.",open
+VIO-2026-225,"8/6/2026, 12:58:42 pm",Safety Boots,ppe,laptop-webcam,,high,95.00,"Person in center-foreground wearing white/light colored shirt and glasses - feet/lower legs NOT visible in frame, safety boots cannot be confirmed as worn. Person is in factory setting requiring full PPE compliance.",open
+VIO-2026-224,"8/6/2026, 12:58:27 pm",Safety Boots,ppe,laptop-webcam,,high,95.00,"Person on right side wearing light colored shirt, jeans and glasses - feet/footwear not clearly visible in frame, safety boots cannot be confirmed as worn",open
+VIO-2026-223,"8/6/2026, 12:58:27 pm",Safety Boots,ppe,laptop-webcam,,high,95.00,"Person on left side wearing casual shirt and glasses - feet/footwear not clearly visible in frame, safety boots cannot be confirmed as worn",open
+VIO-2026-222,"8/6/2026, 12:58:13 pm",Safety Boots,ppe,laptop-webcam,,high,95.00,"Person on right side wearing glasses, long hair, and white shirt - feet/footwear not clearly visible in frame. Safety boots cannot be confirmed as worn.",open
+VIO-2026-221,"8/6/2026, 12:58:13 pm",Safety Boots,ppe,laptop-webcam,,high,95.00,Person on left side wearing glasses and casual shirt - feet/footwear not clearly visible in frame. Safety boots cannot be confirmed as worn.,open
+VIO-2026-220,"8/6/2026, 12:57:57 pm",Safety Boots,ppe,laptop-webcam,,high,95.00,"Person on right side wearing white shirt and casual clothing - feet/lower legs not visible in frame, safety boots cannot be confirmed as worn",open
+VIO-2026-219,"8/6/2026, 12:57:57 pm",Safety Boots,ppe,laptop-webcam,,high,95.00,"Person on left side wearing white shirt and casual clothing - feet/lower legs not visible in frame, safety boots cannot be confirmed as worn",open
+VIO-2026-218,"8/6/2026, 12:57:42 pm",Safety Boots,ppe,laptop-webcam,,high,95.00,"Person on right side wearing casual shirt and glasses - feet/lower body not clearly visible in frame, safety boots cannot be confirmed as worn",open
+VIO-2026-217,"8/6/2026, 12:57:42 pm",Safety Boots,ppe,laptop-webcam,,high,95.00,"Person on left side wearing casual shirt and glasses - feet/lower body not clearly visible in frame, safety boots cannot be confirmed as worn",open
+VIO-2026-216,"8/6/2026, 12:57:27 pm",Safety Boots,ppe,laptop-webcam,,high,95.00,"Person on right side wearing casual white shirt - feet/lower body not visible in frame, Safety Boots cannot be confirmed as worn",open
+VIO-2026-215,"8/6/2026, 12:57:27 pm",Safety Boots,ppe,laptop-webcam,,high,95.00,"Person on left side wearing casual white shirt - feet/lower body not visible in frame, Safety Boots cannot be confirmed as worn",open
+VIO-2026-214,"8/6/2026, 12:57:13 pm",Safety Boots,ppe,laptop-webcam,,high,95.00,Person on right side wearing white t-shirt in factory setting. Feet/lower legs not visible in frame - safety boots cannot be confirmed as worn. Assumes no PPE footwear.,open
+VIO-2026-213,"8/6/2026, 12:57:13 pm",Safety Boots,ppe,laptop-webcam,,high,95.00,Person on left side wearing white t-shirt in factory setting. Feet/lower legs not visible in frame - safety boots cannot be confirmed as worn. Assumes no PPE footwear.,open
+VIO-2026-212,"8/6/2026, 12:56:57 pm",Safety Boots,ppe,laptop-webcam,,high,95.00,"Person on right side wearing light blue shirt and glasses - feet/footwear NOT clearly visible in frame, cannot confirm safety boots are worn",open
+VIO-2026-211,"8/6/2026, 12:56:57 pm",Safety Boots,ppe,laptop-webcam,,high,95.00,"Person on left side wearing casual shirt and glasses - feet/footwear NOT clearly visible in frame, cannot confirm safety boots are worn",open
+VIO-2026-210,"8/6/2026, 12:56:42 pm",Safety Boots,ppe,laptop-webcam,,high,95.00,Person on right side wearing casual white shirt and glasses - safety boots NOT clearly visible on feet. Lower body/feet area not shown or not wearing visible safety footwear.,open
+VIO-2026-209,"8/6/2026, 12:56:42 pm",Safety Boots,ppe,laptop-webcam,,high,95.00,Person on left side wearing casual shirt and glasses - safety boots NOT clearly visible on feet. Lower body/feet area not shown or not wearing visible safety footwear.,open
+VIO-2026-208,"8/6/2026, 12:56:28 pm",Safety Boots,ppe,laptop-webcam,,high,95.00,Person on right side wearing light blue/grey shirt and glasses - feet/footwear NOT clearly visible in frame. Safety boots cannot be confirmed as worn.,open
+VIO-2026-207,"8/6/2026, 12:56:28 pm",Safety Boots,ppe,laptop-webcam,,high,95.00,Person on left side wearing casual shirt and glasses - feet/footwear NOT clearly visible in frame. Safety boots cannot be confirmed as worn.,open
+VIO-2026-206,"8/6/2026, 12:56:12 pm",Safety Boots,ppe,laptop-webcam,,high,95.00,"Person on right side wearing casual white shirt - safety boots NOT clearly visible on feet/legs. Lower body cut off from frame, cannot confirm PPE compliance.",open
+VIO-2026-205,"8/6/2026, 12:56:12 pm",Safety Boots,ppe,laptop-webcam,,high,95.00,"Person on left side wearing casual shirt - safety boots NOT clearly visible on feet/legs. Lower body cut off from frame, cannot confirm PPE compliance.",open
+VIO-2026-204,"8/6/2026, 12:55:56 pm",Safety Boots,ppe,laptop-webcam,,high,90.00,"Person on left side partially visible - feet and lower legs not visible in frame, safety boots cannot be confirmed as worn",open
+VIO-2026-203,"8/6/2026, 12:55:56 pm",Safety Boots,ppe,laptop-webcam,,high,95.00,"Person on right side wearing glasses and light colored shirt - feet/lower legs not visible in frame, safety boots cannot be confirmed as worn",open
+VIO-2026-202,"8/6/2026, 12:55:42 pm",Safety Boots,ppe,laptop-webcam,,high,95.00,Person on left side wearing glasses and light colored shirt - feet/footwear NOT clearly visible in frame. Safety boots cannot be confirmed as worn.,open
+VIO-2026-201,"8/6/2026, 12:55:42 pm",Safety Boots,ppe,laptop-webcam,,high,95.00,Person in center-right wearing white shirt and glasses - feet/footwear NOT clearly visible in frame. Safety boots cannot be confirmed as worn.,open
+VIO-2026-200,"8/6/2026, 12:55:23 pm",Safety Boots,ppe,laptop-webcam,,high,85.00,Person on right side wearing white shirt and glasses - feet/footwear not clearly visible in frame. Safety boots cannot be confirmed as worn.,open
+VIO-2026-199,"8/6/2026, 12:55:23 pm",Safety Boots,ppe,laptop-webcam,,high,85.00,Person on left side wearing casual shirt and glasses - feet/footwear not clearly visible in frame. Safety boots cannot be confirmed as worn.,open
+VIO-2026-162,"5/6/2026, 12:15:38 pm",Gloves,ppe,laptop-webcam,,high,100.00,Person's hands and arms are clearly visible. No safety gloves are worn on either hand.,open
+VIO-2026-161,"5/6/2026, 12:15:38 pm",Safety Vest,ppe,laptop-webcam,,high,100.00,Person wearing blue casual shirt with no visible safety vest or high-visibility garment.,open
+VIO-2026-160,"5/6/2026, 12:15:38 pm",Helmet,ppe,laptop-webcam,,high,100.00,Person visible in center-foreground wearing glasses and casual blue shirt. No safety helmet is worn on head.,open
+VIO-2026-159,"5/6/2026, 12:14:37 pm",Gloves,ppe,laptop-webcam,,high,100.00,Hands and arms of person are visible and bare. No safety gloves are worn.,open
+VIO-2026-158,"5/6/2026, 12:14:37 pm",Safety Vest,ppe,laptop-webcam,,high,100.00,Person wearing casual blue/grey shirt. No reflective safety vest is visible or worn.,open
+VIO-2026-157,"5/6/2026, 12:14:37 pm",Helmet,ppe,laptop-webcam,,high,100.00,Person visible in center-foreground wearing casual shirt and glasses. No safety helmet is worn on head.,open
+VIO-2026-156,"5/6/2026, 12:14:18 pm",Gloves,ppe,laptop-webcam,,critical,100.00,Person's bare hands are visible with no safety gloves worn.,open
+VIO-2026-155,"5/6/2026, 12:14:18 pm",Safety Vest,ppe,laptop-webcam,,critical,100.00,Person visible in casual shirt without any safety vest or high-visibility clothing worn.,open
+VIO-2026-154,"5/6/2026, 12:14:18 pm",Helmet,ppe,laptop-webcam,,critical,100.00,Person visible in center/foreground wearing only casual office clothing (shirt) and glasses. No safety helmet is worn on head.,open
+VIO-2026-111,"3/6/2026, 2:35:12 pm",Gloves,ppe,laptop-webcam,,high,100.00,Hands and fingers visible in frame with no gloves worn. Both hands exposed without any protective gloves.,open
+VIO-2026-110,"3/6/2026, 2:35:12 pm",Safety Vest,ppe,laptop-webcam,,high,95.00,Person wearing blue and yellow striped casual shirt. No safety vest (high-visibility reflective vest) is clearly visible.,open
+VIO-2026-109,"3/6/2026, 2:35:12 pm",Helmet,ppe,laptop-webcam,,high,98.00,Person visible in center frame wearing casual shirt and glasses. No hard hat or safety helmet is worn on head.,open
+VIO-2026-108,"3/6/2026, 2:34:56 pm",Gloves,ppe,laptop-webcam,,high,100.00,"Person's hands are clearly visible and bare. No safety gloves, work gloves, or hand protection of any kind is worn.",open
+VIO-2026-107,"3/6/2026, 2:34:56 pm",Safety Vest,ppe,laptop-webcam,,high,100.00,Person wearing casual blue checkered/striped shirt. No high-visibility safety vest or reflective clothing is worn. Body protection not visible.,open
+VIO-2026-106,"3/6/2026, 2:34:56 pm",Helmet,ppe,laptop-webcam,,high,100.00,Person visible in center of frame wearing casual shirt and glasses. No safety helmet is worn on head. Head is completely unprotected.,open
+VIO-2026-105,"3/6/2026, 2:34:41 pm",Gloves,ppe,laptop-webcam,,high,100.00,Person's hands are clearly visible with no safety gloves worn. Both hands exposed without protective equipment.,open
+VIO-2026-104,"3/6/2026, 2:34:41 pm",Safety Vest,ppe,laptop-webcam,,high,100.00,Person wearing only casual striped shirt. No reflective safety vest is visible. Required for all factory personnel.,open
+VIO-2026-103,"3/6/2026, 2:34:41 pm",Helmet,ppe,laptop-webcam,,high,100.00,Person in foreground wearing casual office clothing (striped shirt) with glasses. No safety helmet is visible on head.,open
+VIO-2026-102,"3/6/2026, 2:34:26 pm",Gloves,ppe,laptop-webcam,,high,100.00,Person's hands are fully visible and bare with no safety gloves worn,open
+VIO-2026-101,"3/6/2026, 2:34:26 pm",Safety Vest,ppe,laptop-webcam,,high,100.00,Person wearing blue checkered casual shirt with no high-visibility safety vest or reflective clothing,open
+VIO-2026-100,"3/6/2026, 2:34:26 pm",Helmet,ppe,laptop-webcam,,high,100.00,Person in foreground wearing casual shirt and glasses with no safety helmet visible on head,open
+VIO-2026-099,"3/6/2026, 2:34:07 pm",Gloves,ppe,laptop-webcam,,high,100.00,Person's hands are visible and bare. No safety gloves are worn. Hand protection is mandatory PPE in factory environment.,open
+VIO-2026-098,"3/6/2026, 2:34:07 pm",Safety Vest,ppe,laptop-webcam,,high,100.00,Person visible wearing only casual striped shirt. No safety vest or high-visibility vest is worn. Safety vest is mandatory PPE in factory environment.,open
+VIO-2026-097,"3/6/2026, 2:34:07 pm",Helmet,ppe,laptop-webcam,,high,100.00,Person visible in indoor factory setting wearing casual striped shirt and glasses. No safety helmet is worn on head. Helmet is mandatory PPE in factory environment per Factories Act 1948.,open
+VIO-2026-096,"3/6/2026, 1:02:04 pm",Helmet,ppe,laptop-webcam,,high,100.00,"Person visible in indoor facility wearing casual clothing (blue striped shirt) with NO helmet worn. Head is completely exposed. Person appears to be in a factory/industrial setting based on ceiling fan, fluorescent lighting, and institutional background.",open
+VIO-2026-095,"2/6/2026, 4:55:59 pm",Gloves,ppe,laptop-webcam,,high,100.00,Person in background has exposed bare hands. No safety gloves are visible.,open
+VIO-2026-094,"2/6/2026, 4:55:59 pm",Safety Vest,ppe,laptop-webcam,,high,100.00,Person in background is wearing casual dark blue shirt. No safety vest is clearly visible.,open
+VIO-2026-093,"2/6/2026, 4:55:59 pm",Helmet,ppe,laptop-webcam,,high,100.00,"Person in background (standing, wearing blue shirt) is NOT wearing a safety helmet. No helmet is visible on head.",open
+VIO-2026-092,"2/6/2026, 4:55:59 pm",Gloves,ppe,laptop-webcam,,high,100.00,Person in foreground has exposed bare hands. No safety gloves are visible.,open
+VIO-2026-091,"2/6/2026, 4:55:59 pm",Safety Vest,ppe,laptop-webcam,,high,100.00,Person in foreground is wearing casual grey t-shirt. No safety vest is clearly visible.,open
+VIO-2026-090,"2/6/2026, 4:55:59 pm",Helmet,ppe,laptop-webcam,,high,100.00,"Person in foreground (seated, wearing glasses) is NOT wearing a safety helmet. No helmet is visible on head.",open
+VIO-2026-089,"29/5/2026, 3:18:10 pm",Gloves,ppe,laptop-webcam,,high,100.00,Person's hands are visible and bare. No safety gloves are worn.,open
+VIO-2026-088,"29/5/2026, 3:18:10 pm",Safety Vest,ppe,laptop-webcam,,critical,100.00,Person wearing only casual striped shirt. No high-visibility safety vest is visible.,open
+VIO-2026-087,"29/5/2026, 3:18:10 pm",Helmet,ppe,laptop-webcam,,critical,100.00,Person in center of frame wearing casual striped shirt and glasses. No safety helmet is visible on head.,open
+VIO-2026-086,"28/5/2026, 12:46:56 pm",Helmet,ppe,laptop-webcam,,high,95.00,"Person visible in center-foreground wearing casual blue checkered shirt and glasses, but NO safety helmet is clearly visible on their head or body. Helmet is required PPE for all factory floor personnel per Factories Act 1948.",open
+VIO-2026-085,"28/5/2026, 12:46:39 pm",Helmet,ppe,laptop-webcam,,high,95.00,Person visible in indoor factory/facility setting wearing casual shirt and glasses. NO safety helmet is clearly visible on head or body. Person appears to be in a manufacturing facility environment but is not wearing required head protection equipment.,open
+VIO-2026-084,"28/5/2026, 12:37:23 pm",Helmet,ppe,laptop-webcam,,high,100.00,Person visible in indoor factory/facility setting wearing casual blue checkered shirt and glasses. NO helmet is clearly visible on head or body. Required PPE (safety helmet) is completely absent.,open
+VIO-2026-083,"28/5/2026, 12:37:04 pm",Helmet,ppe,laptop-webcam,,high,95.00,Person visible in indoor factory/facility setting wearing casual blue and green striped shirt. No safety helmet is clearly visible on the person's head or body. Required PPE (helmet) is NOT worn.,open
+VIO-2026-082,"28/5/2026, 12:27:09 pm",Helmet,ppe,laptop-webcam,,high,100.00,Person visible in indoor factory/office setting wearing casual blue and white striped shirt. No safety helmet is worn or visible on the person's body or head. Person is in factory premises without required PPE.,open
+VIO-2026-081,"28/5/2026, 12:26:53 pm",Helmet,ppe,laptop-webcam,,high,95.00,Person visible in center of frame wearing casual striped shirt and glasses. No safety helmet is clearly visible on head or body. Person appears to be in an indoor facility and is not wearing required head protection equipment.,open
+VIO-2026-080,"28/5/2026, 12:26:35 pm",Helmet,ppe,laptop-webcam,,high,95.00,Person visible in factory/industrial setting wearing casual striped shirt and glasses. No safety helmet is clearly visible on head or body. PPE requirement not met.,open
+VIO-2026-079,"27/5/2026, 5:31:29 pm",Helmet,ppe,laptop-webcam,,critical,100.00,"Person visible in factory/industrial setting wearing casual blue checkered shirt. Head is clearly visible with dark hair. No helmet is worn or visible on the person's body. Person appears to be in an indoor facility with industrial ceiling fan visible, indicating factory/manufacturing environment where helmet is mandatory PPE.",open
+VIO-2026-078,"27/5/2026, 5:31:10 pm",Helmet,ppe,laptop-webcam,,high,100.00,Person visible in indoor factory/facility setting wearing casual office clothing (checkered shirt) with NO safety helmet visible on head or body. Helmet is mandatory PPE for all factory personnel regardless of work area.,open
+VIO-2026-077,"27/5/2026, 5:29:48 pm",Helmet,ppe,laptop-webcam,,critical,95.00,Person visible in factory/industrial setting wearing casual blue checkered shirt and glasses. NO safety helmet is visible on head or body. Helmet is not worn.,open
+VIO-2026-076,"27/5/2026, 5:29:30 pm",Helmet,ppe,laptop-webcam,,critical,95.00,Person visible in background wearing casual clothing with NO helmet visible. Head protection not worn.,open
+VIO-2026-075,"27/5/2026, 5:29:30 pm",Helmet,ppe,laptop-webcam,,critical,100.00,Person in foreground wearing striped shirt in factory setting with NO helmet visible on head or body. Head is completely exposed.,open
+VIO-2026-074,"27/5/2026, 4:12:58 pm",Helmet,ppe,laptop-webcam,,high,95.00,Person visible in factory/industrial setting wearing casual shirt and glasses. No safety helmet is clearly visible on head or body. Required PPE (hard hat/safety helmet) is NOT worn.,open
+VIO-2026-073,"27/5/2026, 4:12:44 pm",Helmet,ppe,laptop-webcam,,high,100.00,Person visible in indoor factory/manufacturing setting wearing casual plaid shirt and glasses. NO safety helmet is clearly visible on head or body. Helmet is a mandatory PPE requirement under Factories Act 1948 for all factory floor personnel.,open
+VIO-2026-072,"27/5/2026, 4:12:26 pm",Helmet,ppe,laptop-webcam,,critical,100.00,Person visible in factory/industrial setting wearing casual shirt and glasses. NO safety helmet is clearly visible on the person's head or body. Head is completely unprotected.,open
+VIO-2026-071,"27/5/2026, 4:06:53 pm",Helmet,ppe,laptop-webcam,,critical,100.00,Person visible in casual shirt and indoor clothing with NO helmet worn. Head is completely exposed with no safety helmet visible anywhere on body or nearby. Mandatory PPE not worn.,open
+VIO-2026-070,"27/5/2026, 4:06:38 pm",Helmet,ppe,laptop-webcam,,high,95.00,Person visible in indoor factory/industrial setting wearing casual striped shirt and glasses. No safety helmet is clearly visible on head or body. Required PPE (helmet) is NOT worn.,open
+VIO-2026-069,"27/5/2026, 4:06:23 pm",Helmet,ppe,laptop-webcam,,high,95.00,Person visible in center of frame wearing casual striped shirt and glasses. No safety helmet is clearly visible on head or body. Required PPE (Helmet) is NOT worn.,open
+VIO-2026-068,"27/5/2026, 4:06:05 pm",Helmet,ppe,laptop-webcam,,high,95.00,"Person visible in factory/industrial setting wearing casual checkered shirt and glasses. No safety helmet is clearly visible on head or body. Person appears to be in an indoor facility with yellow walls and industrial ceiling fan, indicating factory/manufacturing environment where helmet is mandatory PPE.",open
+VIO-2026-067,"27/5/2026, 3:54:47 pm",Helmet,ppe,laptop-webcam,,high,95.00,Person visible in indoor factory/office setting wearing casual striped shirt and glasses. No safety helmet is clearly visible on head or body. Required PPE (helmet) is NOT worn.,open
+VIO-2026-066,"27/5/2026, 3:54:33 pm",Helmet,ppe,laptop-webcam,,high,95.00,Person visible in indoor factory/office setting wearing casual striped shirt and glasses. NO safety helmet is clearly visible on head or body. Person is not wearing required head protection PPE.,open
+VIO-2026-065,"27/5/2026, 3:54:14 pm",Helmet,ppe,laptop-webcam,,high,95.00,Person visible in center/foreground wearing casual striped shirt and glasses. No safety helmet is clearly visible on head or body. PPE requirement not met.,open
+VIO-2026-064,"27/5/2026, 2:55:29 pm",Gloves,ppe,laptop-webcam,,high,90.00,No protective gloves visible on hands of worker in casual attire,open
+VIO-2026-063,"27/5/2026, 2:55:29 pm",Safety Vest,ppe,laptop-webcam,,critical,95.00,Person wearing checkered casual shirt only - no high-visibility safety vest or reflective vest worn,open
+VIO-2026-062,"27/5/2026, 2:55:29 pm",Helmet,ppe,laptop-webcam,,critical,95.00,Person in foreground wearing casual checkered shirt with no hard hat or protective helmet visible on head,open
+VIO-2026-061,"27/5/2026, 2:55:13 pm",Gloves,ppe,laptop-webcam,,high,90.00,Person's hands are visible and bare. No safety gloves are clearly visible on either hand.,open
+VIO-2026-060,"27/5/2026, 2:55:13 pm",Safety Vest,ppe,laptop-webcam,,high,95.00,Person wearing casual checkered shirt. No high-visibility safety vest is clearly visible on torso.,open
+VIO-2026-059,"27/5/2026, 2:55:13 pm",Helmet,ppe,laptop-webcam,,high,95.00,Person visible in center-right of frame wearing casual office shirt. No safety helmet is clearly visible on head.,open
+VIO-2026-058,"27/5/2026, 2:54:59 pm",Gloves,ppe,laptop-webcam,,high,100.00,Person visible in center-foreground with bare hands exposed. No safety gloves are worn.,open
+VIO-2026-057,"27/5/2026, 2:54:59 pm",Safety Vest,ppe,laptop-webcam,,critical,100.00,Person visible in center-foreground wearing only checkered casual shirt without any safety vest or high-visibility clothing.,open
+VIO-2026-056,"27/5/2026, 2:54:59 pm",Helmet,ppe,laptop-webcam,,critical,100.00,Person visible in center-foreground wearing casual checkered shirt without safety helmet. Head protection is NOT worn.,open
+VIO-2026-055,"27/5/2026, 2:54:47 pm",Gloves,ppe,laptop-webcam,,high,90.00,Person's hands are visible and bare. No safety gloves are worn despite being in industrial setting.,open
+VIO-2026-054,"27/5/2026, 2:54:46 pm",Safety Vest,ppe,laptop-webcam,,high,95.00,Person wearing casual checkered shirt in factory environment. No safety vest or high-visibility vest is visibly worn.,open
+VIO-2026-053,"27/5/2026, 2:54:46 pm",Helmet,ppe,laptop-webcam,,high,95.00,Person visible in factory/industrial setting wearing casual checkered shirt without safety helmet. Head protection is not worn.,open
+VIO-2026-052,"27/5/2026, 2:54:29 pm",Gloves,ppe,laptop-webcam,,high,100.00,"Person with bare hands visible, NO safety gloves worn despite being in factory work area",open
+VIO-2026-051,"27/5/2026, 2:54:29 pm",Safety Vest,ppe,laptop-webcam,,high,100.00,Person in casual checkered shirt with NO visible safety vest or high-visibility clothing worn,open
+VIO-2026-050,"27/5/2026, 2:54:29 pm",Helmet,ppe,laptop-webcam,,high,100.00,Person in factory environment wearing casual office clothing (checkered shirt) with NO safety helmet visible on head,open
+VIO-2026-049,"27/5/2026, 2:54:14 pm",Gloves,ppe,laptop-webcam,,high,100.00,Person's hands and wrists are clearly visible with no safety gloves worn. Bare hands are exposed.,open
+VIO-2026-048,"27/5/2026, 2:54:14 pm",Safety Vest,ppe,laptop-webcam,,high,100.00,Person in casual checkered shirt with no visible safety vest or high-visibility clothing worn over torso.,open
+VIO-2026-047,"27/5/2026, 2:54:14 pm",Helmet,ppe,laptop-webcam,,high,100.00,Person visible in center-right of frame wearing casual office shirt and glasses. No safety helmet is worn on head.,open
+VIO-2026-046,"27/5/2026, 2:53:59 pm",Gloves,ppe,laptop-webcam,,high,90.00,Person's hands and wrists clearly visible with NO safety gloves worn,open
+VIO-2026-045,"27/5/2026, 2:53:59 pm",Safety Vest,ppe,laptop-webcam,,critical,95.00,Person wearing dark casual shirt with NO visible safety vest or reflective high-visibility vest,open
+VIO-2026-044,"27/5/2026, 2:53:59 pm",Helmet,ppe,laptop-webcam,,critical,95.00,Person in factory environment wearing casual office clothing (shirt) with NO safety helmet visible on head,open
+VIO-2026-043,"27/5/2026, 2:53:45 pm",Gloves,ppe,laptop-webcam,,high,95.00,Person visible in center-foreground with bare hands visible. No safety gloves are worn.,open
+VIO-2026-042,"27/5/2026, 2:53:45 pm",Safety Vest,ppe,laptop-webcam,,critical,100.00,Person visible in center-foreground wearing casual office shirt without reflective safety vest. No safety vest is worn or visible.,open
+VIO-2026-041,"27/5/2026, 2:53:45 pm",Helmet,ppe,laptop-webcam,,critical,100.00,Person visible in center-foreground wearing casual office shirt without safety helmet. Helmet is not worn or visible.,open
+VIO-2026-040,"27/5/2026, 2:53:34 pm",Gloves,ppe,laptop-webcam,,high,90.00,Person's hands are visible and bare. No safety gloves are being worn.,open
+VIO-2026-039,"27/5/2026, 2:53:34 pm",Safety Vest,ppe,laptop-webcam,,high,95.00,Person wearing casual checkered shirt only. No high-visibility safety vest is worn.,open
+VIO-2026-038,"27/5/2026, 2:53:34 pm",Helmet,ppe,laptop-webcam,,high,95.00,Person in factory environment wearing checkered shirt and glasses without safety helmet. No helmet is visible on head.,open
+VIO-2026-037,"27/5/2026, 2:53:29 pm",Gloves,ppe,laptop-webcam,,high,100.00,Hands and arms visible with no safety gloves worn. Bare hands exposed in factory area.,open
+VIO-2026-036,"27/5/2026, 2:53:29 pm",Safety Vest,ppe,laptop-webcam,,critical,100.00,Person wearing only checkered casual shirt with no safety vest or high-visibility clothing visible,open
+VIO-2026-035,"27/5/2026, 2:53:29 pm",Helmet,ppe,laptop-webcam,,critical,100.00,Person in factory/industrial setting wearing casual checkered shirt with no safety helmet visible on head,open
+VIO-2026-034,"27/5/2026, 2:52:59 pm",Gloves,ppe,laptop-webcam,,high,100.00,Person's hands and wrists clearly visible with no protective gloves worn,open
+VIO-2026-033,"27/5/2026, 2:52:59 pm",Safety Vest,ppe,laptop-webcam,,critical,100.00,Person wearing only casual blue checkered shirt with no high-visibility safety vest worn over clothing,open
+VIO-2026-032,"27/5/2026, 2:52:59 pm",Helmet,ppe,laptop-webcam,,critical,100.00,Person in factory setting wearing casual blue checkered shirt with no safety helmet visible on head,open
+VIO-2026-031,"27/5/2026, 2:52:43 pm",Gloves,ppe,laptop-webcam,,high,100.00,Person's hands are clearly visible with no safety gloves worn,open
+VIO-2026-030,"27/5/2026, 2:52:43 pm",Safety Vest,ppe,laptop-webcam,,critical,100.00,Person wearing casual blue checkered shirt without any high-visibility safety vest,open
+VIO-2026-029,"27/5/2026, 2:52:43 pm",Helmet,ppe,laptop-webcam,,critical,100.00,Person in factory environment wearing casual blue checkered shirt with no safety helmet visible on head,open
+VIO-2026-028,"27/5/2026, 2:52:29 pm",Gloves,ppe,laptop-webcam,,high,100.00,Person in center-foreground has bare hands visible with no safety gloves worn.,open
+VIO-2026-027,"27/5/2026, 2:52:29 pm",Safety Vest,ppe,laptop-webcam,,high,100.00,Person in center-foreground wearing blue checkered shirt is NOT wearing a visible safety vest or high-visibility garment.,open
+VIO-2026-026,"27/5/2026, 2:52:29 pm",Helmet,ppe,laptop-webcam,,high,100.00,Person in center-foreground wearing blue checkered shirt is NOT wearing a safety helmet. Head is completely exposed.,open
+VIO-2026-025,"27/5/2026, 2:51:23 pm",Gloves,ppe,laptop-webcam,,high,100.00,Person's hands clearly visible with NO safety gloves worn,open
+VIO-2026-024,"27/5/2026, 2:51:23 pm",Safety Vest,ppe,laptop-webcam,,high,100.00,Person wearing only checkered shirt with NO safety vest or high-visibility clothing visible,open
+VIO-2026-023,"27/5/2026, 2:51:23 pm",Helmet,ppe,laptop-webcam,,high,100.00,Person in foreground wearing casual checkered shirt and regular clothing with NO safety helmet visible on head,open
+VIO-2026-022,"26/5/2026, 6:05:01 pm",Helmet,ppe,laptop-webcam,,critical,95.00,Person visible in background (right side) is NOT wearing a safety helmet. No protective headgear visible.,open
+VIO-2026-021,"26/5/2026, 6:05:01 pm",Helmet,ppe,laptop-webcam,,critical,100.00,Person in foreground (center) wearing casual light-colored shirt is NOT wearing a safety helmet. Head is completely unprotected. No helmet visible on body or nearby.,open
+VIO-2026-020,"26/5/2026, 5:48:55 pm",Goggles,ppe,laptop-webcam,,high,85.00,"Person partially visible in background right area, no goggles clearly visible on face or body",open
+VIO-2026-019,"26/5/2026, 5:48:55 pm",Goggles,ppe,laptop-webcam,,high,95.00,"Person in foreground wearing light colored shirt with dark hair, no goggles clearly visible on face or body",open
+VIO-2026-018,"26/5/2026, 5:48:34 pm",Goggles,ppe,laptop-webcam,,critical,100.00,"Person visible in factory setting without safety goggles. Eyes are unprotected against flying debris, chemical splashes, or welding hazards.",open
+VIO-2026-017,"26/5/2026, 5:48:34 pm",Helmet,ppe,laptop-webcam,,critical,100.00,Person visible in factory setting wearing casual shirt without safety helmet. Head is completely unprotected.,open
+VIO-2026-016,"26/5/2026, 5:48:15 pm",Helmet,ppe,laptop-webcam,,high,80.00,Person partially visible on right side - helmet not clearly visible or worn.,open
+VIO-2026-015,"26/5/2026, 5:48:15 pm",Helmet,ppe,laptop-webcam,,high,85.00,Person visible in background (left side) - helmet status cannot be clearly confirmed as worn. No helmet visibly present on head.,open
+VIO-2026-014,"26/5/2026, 5:48:15 pm",Helmet,ppe,laptop-webcam,,high,95.00,"Person in center foreground wearing casual shirt and glasses - NO helmet clearly visible on head or body. This appears to be an indoor office/classroom setting but if this is a factory floor, helmet is mandatory and not worn.",open
+VIO-2026-013,"26/5/2026, 5:24:27 pm",Gloves,ppe,laptop-webcam,,medium,85.00,No safety gloves visible on hands of person,open
+VIO-2026-012,"26/5/2026, 5:24:27 pm",Safety Vest,ppe,laptop-webcam,,high,90.00,Person wearing light colored shirt but no visible safety vest,open
+VIO-2026-011,"26/5/2026, 5:24:27 pm",Helmet,ppe,laptop-webcam,,high,95.00,Person visible in indoor facility without safety helmet worn,open
+VIO-2026-010,"26/5/2026, 4:22:04 pm",Unsafe Act - Distraction,unsafe,laptop-webcam,,medium,85.00,"Person posing for camera with hands on head, demonstrating distracted behavior rather than focused work activity",open
+VIO-2026-009,"26/5/2026, 4:22:04 pm",Gloves,ppe,laptop-webcam,,medium,90.00,No gloves visible on person's hands,open
+VIO-2026-008,"26/5/2026, 4:22:04 pm",Safety Vest,ppe,laptop-webcam,,high,95.00,Person wearing light-colored casual shirt without safety vest,open
+VIO-2026-007,"26/5/2026, 11:55:26 am",Helmet,ppe,laptop-webcam,,high,85.00,Person visible on right side (partially visible) is not wearing a safety helmet,open
+VIO-2026-006,"26/5/2026, 11:55:26 am",Gloves,ppe,laptop-webcam,,medium,90.00,Person in foreground (center) is not wearing safety gloves,open
+VIO-2026-005,"26/5/2026, 11:55:26 am",Safety Vest,ppe,laptop-webcam,,high,95.00,Person in foreground (center) is not wearing a safety vest,open
+VIO-2026-004,"26/5/2026, 11:55:26 am",Helmet,ppe,laptop-webcam,,high,95.00,Person in foreground (center) is not wearing a safety helmet,open
+VIO-2026-003,"26/5/2026, 11:55:09 am",Gloves,ppe,laptop-webcam,,medium,90.00,Person in center of frame is not wearing safety gloves,open
+VIO-2026-002,"26/5/2026, 11:55:09 am",Safety Vest,ppe,laptop-webcam,,high,95.00,Person in center of frame is not wearing a safety vest,open
+VIO-2026-001,"26/5/2026, 11:55:09 am",Helmet,ppe,laptop-webcam,,high,95.00,Person in center of frame is not wearing a safety helmet,open
