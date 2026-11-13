@@ -67,7 +67,7 @@ router.get('/feed/live', authenticate, asyncHandler(async (req, res) => {
 router.get('/config', authenticateDevice, asyncHandler(async (req, res) => {
   const { rows } = await getDB().query(`
     SELECT c.id AS camera_id, c.cam_label, c.local_rtsp_url AS rtsp_url,
-           c.fps_target, c.enabled, a.name AS area_name
+             c.fps_target, c.enabled, c.camera_role, c.headcount_enabled, a.name AS area_name
     FROM cameras c LEFT JOIN areas a ON a.id = c.area_id
     WHERE c.edge_device_id = $1 AND c.enabled = TRUE
     ORDER BY c.cam_label`,
@@ -338,3 +338,5 @@ async function nextViolationNo(client) {
 }
 
 module.exports = router;
+
+

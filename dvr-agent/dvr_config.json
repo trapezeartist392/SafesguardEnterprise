@@ -1,0 +1,73 @@
+{
+  "server_url": "http://localhost:4200",
+  "device_key": "fe43aeea7fbd3f175a151664532e706e593a478d7def0e5e",
+  "device_code": "DVR-OFFICE-01",
+
+  "dvr": {
+    "ip": "192.168.1.10",
+    "port": 8554,
+    "username": "admin",
+    "password": "Admin@123",
+    "protocol": "dahua",
+    "transport": "tcp"
+  },
+
+  "channels": [
+    {  
+      "channel": 1,
+      "label": "ENTRANCE-CAM",
+      "stream": "main",
+      "camera_role": "entry",
+      "headcount_enabled": true,
+      "fps_target": 8,
+      "enabled": true
+    },
+    {
+      "channel": 2,
+      "label": "EXIT-CAM",
+      "stream": "main",
+      "camera_role": "exit",
+      "headcount_enabled": true,
+      "fps_target": 8,
+      "enabled": true
+    },
+    {
+      "channel": 3,
+      "label": "PRESS-SHOP-CAM",
+      "stream": "main",
+      "camera_role": "ppe",
+      "headcount_enabled": false,
+      "fps_target": 8,
+      "enabled": true
+    },
+    {
+      "channel": 4,
+      "label": "ASSEMBLY-LINE-CAM",
+      "stream": "main",
+      "camera_role": "ppe",
+      "headcount_enabled": false,
+      "fps_target": 8,
+      "enabled": true
+    },
+    {
+      "channel": 5,
+      "label": "MUSTER-POINT-CAM",
+      "stream": "main",
+      "camera_role": "assembly",
+      "headcount_enabled": true,
+      "fps_target": 8,
+      "enabled": true
+    }
+  ],
+
+  "detection": {
+    "model_path": "models/ppe-v1.pt",
+    "headcount_model": "yolov8n.pt",
+    "confidence_threshold": 0.5,
+    "frame_skip": 3
+  },
+
+  "heartbeat_interval": 30,
+  "reconnect_delay": 5,
+  "max_reconnect_attempts": 0
+}

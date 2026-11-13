@@ -20,6 +20,7 @@ const complianceRoutes = require('./routes/compliance.routes');
 const trialRoutes = require('./routes/trial.routes');
 const roiRoutes = require('./routes/roi.routes');
 const adminRoutes = require('./routes/admin.routes');
+const trainingRoutes = require('./routes/training.routes');
 
 const app = express();
 
@@ -59,6 +60,10 @@ app.use(`${v1}/cameras`, requireLicense, cameraRoutes);
 app.use(`${v1}/plants`, requireLicense, plantRoutes);
 app.use(`${v1}/areas`, requireLicense, areaRoutes);
 app.use(`${v1}/compliance`, requireLicense, complianceRoutes);
+const headcountRoutes = require('./routes/headcount.routes');
+app.use(`${v1}/headcount`, headcountRoutes);
+
+app.use(`${v1}/training`, requireLicense, trainingRoutes);
 app.use(`${v1}/form18`, requireLicense, complianceRoutes);
 app.use(`${v1}/roi`, requireLicense, roiRoutes);
 app.use(`${v1}/license`, requireLicense, licenseRoutes);

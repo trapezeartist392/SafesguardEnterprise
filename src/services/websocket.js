@@ -67,11 +67,20 @@ function broadcastStats(tenantId, stats) {
 
 function getClientCount() { return clients.size; }
 
+
+function broadcastToTenant(tenantId, msg) {
+  clients.forEach((info, ws) => {
+    if (info.tenantId === tenantId && ws.readyState === ws.OPEN) {
+      ws.send(JSON.stringify(msg));
+    }
+  });
+}
 module.exports = {
   initWebSocket,
   broadcastViolation,
   broadcastDeviceStatus,
   broadcastCameraStatus,
   broadcastStats,
+  broadcastToTenant,
   getClientCount,
 };

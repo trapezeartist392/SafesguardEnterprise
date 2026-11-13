@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback } from 'react';
+﻿import { useState, useEffect, useCallback } from 'react';
 import axios from 'axios';
 
 const T = {
@@ -34,9 +34,9 @@ export default function EdgeDeviceManager({ toast = () => {} }) {
   const [expanded, setExpanded] = useState(null);
 
   const [showDeviceForm, setShowDeviceForm] = useState(false);
-  const [camFormFor, setCamFormFor]         = useState(null); // device id
+  const [camFormFor, setCamFormFor]         = useState(null);
   const [editCam, setEditCam]               = useState(null);
-  const [newKey, setNewKey]                 = useState(null); // { device_code, api_key }
+  const [newKey, setNewKey]                 = useState(null);
   const [tick, setTick]                     = useState(0);
 
   const load = useCallback(async () => {
@@ -58,7 +58,6 @@ export default function EdgeDeviceManager({ toast = () => {} }) {
 
   useEffect(() => { load(); }, [load]);
 
-  // refresh thumbnails + status every 10s
   useEffect(() => {
     const i = setInterval(() => { load(); setTick(t => t + 1); }, 10000);
     return () => clearInterval(i);
@@ -66,7 +65,6 @@ export default function EdgeDeviceManager({ toast = () => {} }) {
 
   const camsOf = id => cameras.filter(c => c.edge_device_id === id);
 
-  // ── actions ───────────────────────────────────────────────
   async function addDevice(form) {
     try {
       const r = await axios.post('/api/v1/devices', form, { headers: auth() });
@@ -145,7 +143,6 @@ export default function EdgeDeviceManager({ toast = () => {} }) {
 
   return (
     <div style={{ animation: 'slideIn .3s ease' }}>
-      {/* ── header ── */}
       <div style={{ display:'flex', justifyContent:'space-between', alignItems:'flex-start', marginBottom:20, flexWrap:'wrap', gap:12 }}>
         <div>
           <h2 style={{ fontSize:22, fontWeight:800, color:T.white, margin:0 }}>Edge Devices &amp; Cameras</h2>
@@ -156,7 +153,6 @@ export default function EdgeDeviceManager({ toast = () => {} }) {
         <button onClick={() => setShowDeviceForm(true)} style={btnPrimary}>+ Register Edge Device</button>
       </div>
 
-      {/* ── summary ── */}
       <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fit,minmax(160px,1fr))', gap:12, marginBottom:20 }}>
         <Stat label="Edge Devices" value={devices.length} sub={`${onlineDevs} online`} color={T.amber}/>
         <Stat label="Cameras"      value={totalCams}      sub={`${onlineCams} streaming`} color={T.green}/>
@@ -164,7 +160,6 @@ export default function EdgeDeviceManager({ toast = () => {} }) {
         <Stat label="Violations Today" value={devices.reduce((s,d)=>s+(d.violations_today||0),0)} sub="all devices" color={T.red}/>
       </div>
 
-      {/* ── api key modal ── */}
       {newKey && (
         <Modal onClose={() => setNewKey(null)} title="Device API Key — shown once">
           <p style={{ fontSize:13, color:T.muted, marginBottom:14 }}>
@@ -183,7 +178,6 @@ export default function EdgeDeviceManager({ toast = () => {} }) {
         </Modal>
       )}
 
-      {/* ── device form ── */}
       {showDeviceForm && (
         <Modal onClose={() => setShowDeviceForm(false)} title="Register Edge Device">
           <DeviceForm areas={areas} plants={plants}
@@ -191,7 +185,6 @@ export default function EdgeDeviceManager({ toast = () => {} }) {
         </Modal>
       )}
 
-      {/* ── camera form ── */}
       {camFormFor && (
         <Modal onClose={() => setCamFormFor(null)} title="Attach Camera">
           <CameraForm
@@ -217,7 +210,6 @@ export default function EdgeDeviceManager({ toast = () => {} }) {
         </Modal>
       )}
 
-      {/* ── devices ── */}
       {devices.length === 0 ? (
         <Empty onAdd={() => setShowDeviceForm(true)}/>
       ) : devices.map(d => {
@@ -226,7 +218,6 @@ export default function EdgeDeviceManager({ toast = () => {} }) {
         const open = expanded === d.id;
         return (
           <div key={d.id} style={{ background:T.panel, border:`1px solid ${T.border}`, borderRadius:10, marginBottom:14, overflow:'hidden' }}>
-            {/* device header */}
             <div style={{ padding:'16px 18px', display:'flex', justifyContent:'space-between', alignItems:'center', flexWrap:'wrap', gap:12, cursor:'pointer' }}
                  onClick={() => setExpanded(open ? null : d.id)}>
               <div style={{ display:'flex', alignItems:'center', gap:14 }}>
@@ -252,7 +243,6 @@ export default function EdgeDeviceManager({ toast = () => {} }) {
 
             {open && (
               <div style={{ borderTop:`1px solid ${T.border}`, padding:18 }}>
-                {/* device actions */}
                 <div style={{ display:'flex', gap:10, marginBottom:16, flexWrap:'wrap' }}>
                   <button onClick={() => setCamFormFor(d.id)} disabled={cams.length >= cap}
                     style={{ ...btnPrimary, opacity: cams.length >= cap ? .4 : 1, cursor: cams.length >= cap ? 'not-allowed' : 'pointer' }}>
@@ -291,15 +281,12 @@ export default function EdgeDeviceManager({ toast = () => {} }) {
   );
 }
 
-// ── camera card with live thumbnail ───────────────────────────
 function CameraCard({ cam, tick, onEdit, onDelete, onTest }) {
   const online = cam.stream_status === 'online';
   const thumb  = cam.last_frame_path ? `${cam.last_frame_path}?t=${tick}` : null;
-  const lastViol = cam.last_violation_frame;
 
   return (
     <div style={{ background:T.card, border:`1px solid ${T.border}`, borderRadius:10, overflow:'hidden' }}>
-      {/* live thumbnail */}
       <div style={{ position:'relative', height:150, background:'#000' }}>
         {thumb ? (
           <img src={thumb} alt={cam.cam_label}
@@ -312,7 +299,6 @@ function CameraCard({ cam, tick, onEdit, onDelete, onTest }) {
             {online ? 'Waiting for frame…' : 'No signal'}
           </div>
         )}
-        {/* status pill */}
         <div style={{ position:'absolute', top:8, left:8, display:'flex', alignItems:'center', gap:6,
           background:'rgba(0,0,0,.72)', borderRadius:999, padding:'3px 10px' }}>
           <span style={{ width:7, height:7, borderRadius:'50%', background:camStatusColor(cam.stream_status),
@@ -326,6 +312,12 @@ function CameraCard({ cam, tick, onEdit, onDelete, onTest }) {
           <div style={{ position:'absolute', top:8, right:8, background:T.redDim, color:T.red,
             fontSize:10, padding:'3px 8px', borderRadius:999 }}>DISABLED</div>
         )}
+        {cam.headcount_enabled && (
+          <div style={{ position:'absolute', bottom:8, left:8, background:'rgba(59,130,246,.2)', color:T.blue,
+            fontSize:10, padding:'3px 8px', borderRadius:999, border:'1px solid rgba(59,130,246,.4)' }}>
+            👥 COUNTING
+          </div>
+        )}
         {cam.violations_today > 0 && (
           <div style={{ position:'absolute', bottom:8, right:8, background:T.amber, color:'#000',
             fontSize:11, fontWeight:700, padding:'3px 9px', borderRadius:999 }}>
@@ -334,24 +326,31 @@ function CameraCard({ cam, tick, onEdit, onDelete, onTest }) {
         )}
       </div>
 
-      {/* body */}
       <div style={{ padding:'12px 14px' }}>
         <div style={{ fontSize:14, fontWeight:700, color:T.white, marginBottom:3 }}>{cam.cam_label}</div>
-        <div style={{ fontSize:11, color:T.muted, marginBottom:8 }}>
+        <div style={{ fontSize:11, color:T.muted, marginBottom:4 }}>
           {cam.plant_name || '—'} · {cam.area_name || 'No zone'}
+        </div>
+        <div style={{ fontSize:10, color:T.dim, marginBottom:8 }}>
+          Role: <span style={{ color: cam.camera_role === 'ppe' ? T.muted : T.blue, fontWeight:600 }}>
+            {cam.camera_role === 'ppe' ? 'PPE Monitoring'
+              : cam.camera_role === 'entry' ? 'Entry Gate'
+              : cam.camera_role === 'exit' ? 'Exit Gate'
+              : cam.camera_role === 'assembly' ? 'Assembly Point'
+              : cam.camera_role || 'PPE Monitoring'}
+          </span>
         </div>
         <div style={{ fontSize:10, fontFamily:'monospace', color:T.dim, marginBottom:10,
           overflow:'hidden', textOverflow:'ellipsis', whiteSpace:'nowrap' }} title={cam.rtsp_url}>
           {cam.rtsp_url}
         </div>
 
-        {/* last violation */}
         <div style={{ borderTop:`1px solid ${T.border}`, paddingTop:9, marginBottom:10 }}>
           <div style={{ fontSize:10, color:T.dim, letterSpacing:1, marginBottom:5 }}>LAST VIOLATION</div>
           {cam.last_violation_at ? (
             <div style={{ display:'flex', gap:9, alignItems:'center' }}>
-              {lastViol && (
-                <img src={lastViol} alt="last" style={{ width:46, height:34, objectFit:'cover',
+              {cam.last_violation_frame && (
+                <img src={cam.last_violation_frame} alt="last" style={{ width:46, height:34, objectFit:'cover',
                   borderRadius:5, border:`1px solid ${T.border}`, flexShrink:0 }}
                   onError={e => { e.target.style.display='none'; }}/>
               )}
@@ -380,7 +379,6 @@ function CameraCard({ cam, tick, onEdit, onDelete, onTest }) {
   );
 }
 
-// ── forms ─────────────────────────────────────────────────────
 function DeviceForm({ areas, plants, onCancel, onSave }) {
   const [f, setF] = useState({
     device_code:'', device_type:'jetson_nano', zone_name:'',
@@ -435,13 +433,15 @@ function DeviceForm({ areas, plants, onCancel, onSave }) {
 
 function CameraForm({ deviceId, device, devices, used = 0, areas, plants, initial, onCancel, onSave }) {
   const [f, setF] = useState({
-    edge_device_id: initial?.edge_device_id || deviceId,
-    cam_label:   initial?.cam_label  || '',
-    rtsp_url:    initial?.rtsp_url   || '',
-    plant_id:    initial?.plant_id   || device?.plant_id || '',
-    area_id:     initial?.area_id    || device?.area_id  || '',
-    fps_target:  initial?.fps_target || 15,
-    enabled:     initial?.enabled ?? true,
+    edge_device_id:    initial?.edge_device_id || deviceId,
+    cam_label:         initial?.cam_label      || '',
+    rtsp_url:          initial?.rtsp_url        || '',
+    plant_id:          initial?.plant_id        || device?.plant_id || '',
+    area_id:           initial?.area_id         || device?.area_id  || '',
+    fps_target:        initial?.fps_target      || 15,
+    camera_role:       initial?.camera_role     || 'ppe',
+    headcount_enabled: initial?.headcount_enabled ?? false,
+    enabled:           initial?.enabled         ?? true,
   });
   const set = (k,v) => setF(p => ({ ...p, [k]:v }));
   const areasOfPlant = f.plant_id ? areas.filter(a => a.plant_id === f.plant_id) : areas;
@@ -481,6 +481,14 @@ function CameraForm({ deviceId, device, devices, used = 0, areas, plants, initia
       </Row>
 
       <Row>
+        <Field label="Camera Role" hint="Entry/Exit cameras count people in and out">
+          <select style={input} value={f.camera_role} onChange={e=>set('camera_role', e.target.value)}>
+            <option value="ppe">PPE Monitoring</option>
+            <option value="entry">Entry Gate (counts IN)</option>
+            <option value="exit">Exit Gate (counts OUT)</option>
+            <option value="assembly">Assembly / Muster Point</option>
+          </select>
+        </Field>
         <Field label="Target FPS" hint="10–15 keeps a Jetson comfortable with many cameras">
           <input style={input} type="number" min={1} max={30} value={f.fps_target}
             onChange={e=>set('fps_target', +e.target.value || 15)}/>
@@ -494,8 +502,30 @@ function CameraForm({ deviceId, device, devices, used = 0, areas, plants, initia
         )}
       </Row>
 
+      <label style={{ display:'flex', alignItems:'center', gap:10, fontSize:13, color:T.muted, margin:'0 0 12px', cursor:'pointer' }}>
+        <div onClick={() => set('headcount_enabled', !f.headcount_enabled)}
+          style={{
+            width:40, height:22, borderRadius:11, flexShrink:0,
+            background: f.headcount_enabled ? T.blue : T.border,
+            position:'relative', cursor:'pointer', transition:'background .2s',
+          }}>
+          <div style={{
+            width:16, height:16, borderRadius:'50%', background:'#fff',
+            position:'absolute', top:3,
+            left: f.headcount_enabled ? 21 : 3,
+            transition:'left .2s',
+          }}/>
+        </div>
+        <span>
+          Enable People Counting
+          <span style={{ fontSize:11, color:T.dim, marginLeft:6 }}>
+            (role must be entry / exit / assembly)
+          </span>
+        </span>
+      </label>
+
       {initial && (
-        <label style={{ display:'flex', alignItems:'center', gap:9, fontSize:13, color:T.muted, margin:'4px 0 14px', cursor:'pointer' }}>
+        <label style={{ display:'flex', alignItems:'center', gap:9, fontSize:13, color:T.muted, margin:'0 0 14px', cursor:'pointer' }}>
           <input type="checkbox" checked={f.enabled} onChange={e=>set('enabled', e.target.checked)}/>
           Camera enabled (the edge agent skips disabled cameras)
         </label>
@@ -508,7 +538,6 @@ function CameraForm({ deviceId, device, devices, used = 0, areas, plants, initia
   );
 }
 
-// ── small pieces ──────────────────────────────────────────────
 const Stat = ({ label, value, sub, color }) => (
   <div style={{ background:T.panel, border:`1px solid ${T.border}`, borderRadius:9, padding:'14px 16px' }}>
     <div style={{ fontSize:10, color:T.dim, letterSpacing:1.5, textTransform:'uppercase' }}>{label}</div>
@@ -533,7 +562,7 @@ const Field = ({ label, hint, children }) => (
 );
 
 const Row = ({ children }) => (
-  <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:12 }}>{children}</div>
+  <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:12, marginBottom:0 }}>{children}</div>
 );
 
 const Actions = ({ onCancel, onSave, saveLabel }) => (
@@ -571,7 +600,6 @@ const Empty = ({ onAdd }) => (
   </div>
 );
 
-// ── styles ────────────────────────────────────────────────────
 const input = {
   width:'100%', padding:'9px 12px', background:T.bg, border:`1px solid ${T.border}`,
   borderRadius:7, color:T.white, fontSize:13, outline:'none', fontFamily:'inherit',

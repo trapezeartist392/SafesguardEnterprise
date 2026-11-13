@@ -20,7 +20,7 @@ router.get('/', authenticate, asyncHandler(async (req, res) => {
       c.id, c.cam_label, c.local_rtsp_url AS rtsp_url, c.status, c.enabled,
       c.stream_status, c.last_frame_at, c.last_frame_path,
       c.last_violation_at, c.last_violation_type, c.last_violation_frame,
-      c.fps_target, c.error_message, c.created_at,
+      c.fps_target, c.error_message, c.created_at, c.camera_role,
       c.edge_device_id, d.device_code, d.zone_name AS device_zone, d.status AS device_status,
       c.area_id,  a.name  AS area_name,
       c.plant_id, p.name  AS plant_name,
@@ -78,7 +78,7 @@ router.get('/by-device/:deviceId', authenticate, asyncHandler(async (req, res) =
 // POST /cameras — attach a camera to an edge device
 // ─────────────────────────────────────────────────────────────
 router.post('/', authenticate, asyncHandler(async (req, res) => {
-  const { edge_device_id, cam_label, rtsp_url, local_rtsp_url, area_id, plant_id, fps_target } = req.body;
+  const { edge_device_id, cam_label, rtsp_url, local_rtsp_url, area_id, plant_id, fps_target, headcount_enabled } = req.body;
   const url   = rtsp_url || local_rtsp_url;
   const label = cam_label || req.body.name;
 
@@ -109,10 +109,10 @@ router.post('/', authenticate, asyncHandler(async (req, res) => {
 
   const { rows } = await db.query(`
     INSERT INTO cameras
-      (edge_device_id, cam_label, local_rtsp_url, status, stream_status, area_id, plant_id, fps_target, enabled)
-    VALUES ($1,$2,$3,'active','unknown',$4,$5,$6,TRUE)
+      (edge_device_id, cam_label, local_rtsp_url, status, stream_status, area_id, plant_id, fps_target, enabled, headcount_enabled)
+    VALUES ($1,$2,$3,'active','unknown',$4,$5,$6,TRUE,$7)
     RETURNING *`,
-    [edge_device_id, label, url, area_id || null, plant_id || null, fps_target || 15]
+    [edge_device_id, label, url, area_id || null, plant_id || null, fps_target || 15, typeof headcount_enabled === 'boolean' ? headcount_enabled : false]
   );
 
   res.status(201).json({ success: true, data: rows[0] });
@@ -122,8 +122,7 @@ router.post('/', authenticate, asyncHandler(async (req, res) => {
 // PUT /cameras/:id — rename, re-point, reassign zone, enable/disable
 // ─────────────────────────────────────────────────────────────
 router.put('/:id', authenticate, asyncHandler(async (req, res) => {
-  const { cam_label, name, rtsp_url, local_rtsp_url, status, area_id, plant_id,
-          fps_target, enabled, edge_device_id } = req.body;
+  const { cam_label, name, rtsp_url, local_rtsp_url, status, area_id, plant_id, fps_target, enabled, edge_device_id, camera_role, headcount_enabled } = req.body;
 
   const db = getDB();
 
@@ -147,12 +146,14 @@ router.put('/:id', authenticate, asyncHandler(async (req, res) => {
     UPDATE cameras SET
       cam_label      = COALESCE($1, cam_label),
       local_rtsp_url = COALESCE($2, local_rtsp_url),
-      status         = COALESCE($3, status),
-      area_id        = COALESCE($4, area_id),
-      plant_id       = COALESCE($5, plant_id),
-      fps_target     = COALESCE($6, fps_target),
-      enabled        = COALESCE($7, enabled),
-      edge_device_id = COALESCE($8, edge_device_id)
+      status         = COALESCE($3, cameras.status),
+      area_id        = COALESCE($4, cameras.area_id),
+      plant_id       = COALESCE($5, cameras.plant_id),
+      fps_target     = COALESCE($6, cameras.fps_target),
+      enabled        = COALESCE($7, cameras.enabled),
+      edge_device_id = COALESCE($8, cameras.edge_device_id),
+      camera_role       = COALESCE($11, cameras.camera_role),
+      headcount_enabled = COALESCE($12, cameras.headcount_enabled)
     FROM edge_devices d
     WHERE cameras.id = $9
       AND cameras.edge_device_id = d.id
@@ -161,7 +162,8 @@ router.put('/:id', authenticate, asyncHandler(async (req, res) => {
     [cam_label || name || null, rtsp_url || local_rtsp_url || null, status || null,
      area_id || null, plant_id || null, fps_target || null,
      typeof enabled === 'boolean' ? enabled : null,
-     edge_device_id || null, req.params.id, req.user.tenantId]
+     edge_device_id || null, req.params.id, req.user.tenantId,
+     camera_role || null, typeof headcount_enabled === 'boolean' ? headcount_enabled : null]
   );
 
   if (!rows.length) throw new AppError('Camera not found', 404);
@@ -254,3 +256,5 @@ router.get('/discover/status/:sid', authenticate, asyncHandler(async (req, res) 
 }));
 
 module.exports = router;
+
+

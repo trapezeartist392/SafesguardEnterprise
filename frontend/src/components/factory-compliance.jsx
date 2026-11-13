@@ -2,6 +2,9 @@ import { useState, useEffect, useRef } from "react";
 import { useComplianceData } from "../hooks/useComplianceData";
 import LiveDetectionFeed from "./LiveDetectionFeed";
 import EdgeDeviceManager from "./EdgeDeviceManager";
+import ComplianceReports from "./ComplianceReports";
+import TrainingRecommendations from "./TrainingRecommendations";
+import HeadcountDashboard from "./HeadcountDashboard";
 
 // ─── PALETTE ───────────────────────────────────────────────────
 const C = {
@@ -946,7 +949,7 @@ export default function App() {
     {id:"violations",label:"Violations",   icon:"⚠️", badge:stats.openCount||0},
     {id:"form18",    label:"Form 18",      icon:"📋", badge:stats.pendingCount||0},
     {id:"inspection",label:"Inspection",   icon:"✅"},
-    {id:"reports",   label:"Reports",      icon:"📄"},
+    // {id:"reports",   label:"Reports",      icon:"📄"},
   ];
 
   const sideNav = [
@@ -962,12 +965,11 @@ export default function App() {
       {icon:"⚠️",name:"Violations",    pg:"violations", badge:stats.openCount||0},
       {icon:"📋",name:"Form 18",       pg:"form18",     badge:stats.pendingCount||0},
       {icon:"✅",name:"Inspection",    pg:"inspection"},
+      {icon:"🎓",name:"Training",       pg:"training"},
+      {icon:"??",name:"Headcount",  pg:"headcount"},
     ]},
     {label:"Reports",items:[
-      {icon:"📄",name:"ISO 45001",    pg:"reports"},
-      {icon:"📄",name:"ESIC Returns", pg:"reports"},
-      {icon:"📄",name:"BRSR Safety",  pg:"reports"},
-      {icon:"📄",name:"OSH Code",     pg:"reports"},
+      {icon:"📋", name:"Compliance Reports", pg:"compliance_reports"},
     ]},
   ];
 
@@ -1154,6 +1156,17 @@ export default function App() {
             <EdgeDeviceManager toast={toast}/>
           )}
 
+          {page==="compliance_reports" && (
+            <ComplianceReports/>
+          )}
+
+          {page==="training" && (
+            <TrainingRecommendations/>
+          )}
+          {page==="headcount" && (
+            <HeadcountDashboard/>
+          )}
+
           {/* ── PPE ── */}
           {page==="ppe" && (
             <div style={{animation:"slideIn .3s ease"}}>
@@ -1273,6 +1286,7 @@ export default function App() {
           {/* ── INSPECTION ── */}
           {page==="inspection" && <InspectionPage toast={toast}/>}
 
+
           {/* ── REPORTS ── */}
           {page==="reports" && (
             <div style={{animation:"slideIn .3s ease"}}>
@@ -1329,3 +1343,4 @@ export default function App() {
     </>
   );
 }
+

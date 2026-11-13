@@ -183,7 +183,7 @@ class EdgeAgent:
                         self._start_camera(label)
                     else:
                         self.cameras[label].update({k: v for k, v in server_cams[label].items()
-                                                    if k in ("fps_target", "area_name", "camera_id")})
+                                                    if k in ("fps_target", "area_name", "camera_id", "camera_role")})
 
             if not server_cams:
                 log("[CONFIG] No cameras assigned to this device yet — add them in the dashboard.")
@@ -367,6 +367,28 @@ class EdgeAgent:
 
         self._pull_config()
 
+        # -- Headcount module --------------------------------------------------
+        try:
+            from headcount_counter import HeadcountManager
+            with self.lock:
+                hc_cams = [dict(c, plant_id=self.cfg.get('plant_id'))
+                           for c in self.cameras.values()
+                           if c.get('headcount_enabled') and c.get('camera_role') in ('entry', 'exit', 'assembly')]
+            if hc_cams:
+                self.hc_manager = HeadcountManager(
+                    hc_cams,
+                    self.cfg['backend_url'],
+                    self.s,
+                    flush_interval=5
+                )
+                self.hc_manager.start()
+                log(f"[HC] {len(hc_cams)} headcount camera(s) active")
+            else:
+                log("[HC] No entry/exit/assembly cameras assigned yet -- set camera role in dashboard")
+        except Exception as e:
+            log(f"[HC] headcount module not loaded: {e}")
+        # ----------------------------------------------------------------------
+
         t_hb = t_sync = t_cfg = 0
         hb   = self.cfg.get("heartbeat_interval_sec", 10)
         sy   = self.cfg.get("sync_interval_sec", 10)
@@ -385,3 +407,6 @@ if __name__ == "__main__":
         EdgeAgent().run()
     except KeyboardInterrupt:
         log("\n[EXIT] Edge agent stopped.")
+
+
+

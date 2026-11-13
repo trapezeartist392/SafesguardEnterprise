@@ -20,7 +20,7 @@ const authenticateDevice = asyncHandler(async (req, res, next) => {
   const key = req.headers['x-edge-key'];
   if (!key) throw new AppError('Missing device key', 401);
   const keyHash = crypto.createHash('sha256').update(key).digest('hex');
-  const { rows } = await getDB().query('SELECT id, tenant_id, device_code, status FROM edge_devices WHERE api_key_hash = $1', [keyHash]);
+  const { rows } = await getDB().query('SELECT id, tenant_id, device_code, status, plant_id FROM edge_devices WHERE api_key_hash = $1', [keyHash]);
   if (!rows.length) throw new AppError('Invalid device key', 401);
   req.edgeDevice = rows[0];
   next();

@@ -1,4 +1,4 @@
-/**
+﻿/**
  * CameraSettingsPage.jsx
  * SafeguardIQ Enterprise — Manage cameras after onboarding
  * Place in: frontend/src/pages/settings/CameraSettingsPage.jsx
@@ -69,6 +69,7 @@ function emptyCamera(areaId = "", areaName = "") {
     camId:"", location:"", protocol:"RTSP",
     rtspUrl:"", ipAddress:"", port:"554",
     username:"admin", password:"",
+    camera_role:"ppe", headcount_enabled:false,
     detectHelmet:true, detectVest:true, detectBoots:false,
     detectEye:false, detectGloves:false, detectMask:false,
   };
@@ -83,18 +84,16 @@ export default function CameraSettingsPage() {
   const [cameras,   setCameras]   = useState([]);
   const [areas,     setAreas]     = useState([]);
   const [loading,   setLoading]   = useState(true);
-  const [saving,    setSaving]    = useState({});   // { camId: true/false }
+  const [saving,    setSaving]    = useState({});
   const [deleting,  setDeleting]  = useState({});
   const [toast,     setToast]     = useState(null);
-  const [testResult,setTestResult]= useState({});   // { camId: "ok"|"fail"|"testing" }
+  const [testResult,setTestResult]= useState({});
 
-  // ── Toast helper ──
   const showToast = (msg, type = "success") => {
     setToast({ msg, type });
     setTimeout(() => setToast(null), 3500);
   };
 
-  // ── Load cameras + areas ──
   useEffect(() => {
     const load = async () => {
       try {
@@ -113,7 +112,6 @@ export default function CameraSettingsPage() {
     load();
   }, []);
 
-  // ── Add blank camera row ──
   const addCamera = (areaId = "", areaName = "") => {
     if (cameras.length >= camLimit) {
       showToast(`Camera limit reached (${camLimit}). Upgrade your plan.`, "error");
@@ -122,12 +120,10 @@ export default function CameraSettingsPage() {
     setCameras(p => [...p, { ...emptyCamera(areaId, areaName), _tempId: Date.now() }]);
   };
 
-  // ── Update field in camera row ──
   const upd = (idx, k, v) => {
     setCameras(p => {
       const c = [...p];
       c[idx] = { ...c[idx], [k]: v };
-      // Auto-build RTSP URL if IP changes and no manual URL set
       if (k === "ipAddress" && !c[idx].rtspUrl) {
         const ip   = v;
         const port = c[idx].port || "554";
@@ -139,7 +135,6 @@ export default function CameraSettingsPage() {
     });
   };
 
-  // ── Build PPE types array for API ──
   const buildPpeTypes = (cam) => {
     const types = [];
     if (cam.detectHelmet)  types.push("Helmet");
@@ -151,11 +146,10 @@ export default function CameraSettingsPage() {
     return types.length ? types : ["Helmet", "Safety Vest"];
   };
 
-  // ── Save camera (create or update) ──
   const saveCamera = async (idx) => {
     const cam = cameras[idx];
-    if (!cam.camId) { showToast("Enter a Camera ID / Label", "error"); return; }
-    if (!cam.ipAddress && !cam.rtspUrl) {
+    if (!cam.camId && !cam.cam_label) { showToast("Enter a Camera ID / Label", "error"); return; }
+    if (!cam.ipAddress && !cam.ip_address && !cam.rtspUrl && !cam.rtsp_url) {
       showToast("Enter IP address or RTSP URL", "error"); return;
     }
 
@@ -163,29 +157,29 @@ export default function CameraSettingsPage() {
     setSaving(p => ({ ...p, [key]: true }));
 
     try {
-      const rtspUrl = cam.rtspUrl ||
-        `rtsp://${cam.username||"admin"}${cam.password?":"+cam.password:""}@${cam.ipAddress}:${cam.port||554}/stream1`;
+      const rtspUrl = cam.rtsp_url || cam.rtspUrl ||
+        `rtsp://${cam.username||"admin"}${cam.password?":"+cam.password:""}@${cam.ip_address||cam.ipAddress}:${cam.port||554}/stream1`;
 
       const payload = {
-        camId:          cam.camId,
-        camLabel:       cam.camId,
-        ipAddress:      cam.ipAddress,
-        port:           parseInt(cam.port) || 554,
-        streamProtocol: cam.protocol || "RTSP",
+        camId:             cam.cam_label || cam.camId,
+        camLabel:          cam.cam_label || cam.camId,
+        ipAddress:         cam.ip_address || cam.ipAddress,
+        port:              parseInt(cam.port) || 554,
+        streamProtocol:    cam.stream_protocol || cam.protocol || "RTSP",
         rtspUrl,
-        username:       cam.username,
-        password:       cam.password,
-        locationDesc:   cam.location,
-        areaId:         cam.areaId || null,
-        ppeTypes:       buildPpeTypes(cam),
+        username:          cam.username,
+        password:          cam.password,
+        locationDesc:      cam.location_desc || cam.location,
+        areaId:            cam.area_id || cam.areaId || null,
+        ppeTypes:          buildPpeTypes(cam),
+        camera_role:       cam.camera_role || "ppe",
+        headcount_enabled: cam.headcount_enabled === true,
       };
 
       if (cam.id) {
-        // Update existing
         await axios.put(`/api/v1/cameras/${cam.id}`, payload, { headers });
-        showToast(`${cam.camId} updated ✓`, "success");
+        showToast(`${payload.camLabel} updated ✓`, "success");
       } else {
-        // Create new
         const res = await axios.post("/api/v1/cameras", payload, { headers });
         const newId = res.data?.data?.id;
         setCameras(p => {
@@ -193,7 +187,7 @@ export default function CameraSettingsPage() {
           c[idx] = { ...c[idx], id: newId, _new: false, _tempId: undefined };
           return c;
         });
-        showToast(`${cam.camId} added ✓`, "success");
+        showToast(`${payload.camLabel} added ✓`, "success");
       }
     } catch (err) {
       showToast(err.response?.data?.message || "Save failed", "error");
@@ -202,19 +196,18 @@ export default function CameraSettingsPage() {
     }
   };
 
-  // ── Delete camera ──
   const deleteCamera = async (idx) => {
     const cam = cameras[idx];
     if (!cam.id) {
       setCameras(p => p.filter((_, i) => i !== idx));
       return;
     }
-    if (!window.confirm(`Delete ${cam.camId || "this camera"}? This cannot be undone.`)) return;
+    if (!window.confirm(`Delete ${cam.cam_label || cam.camId || "this camera"}? This cannot be undone.`)) return;
     setDeleting(p => ({ ...p, [cam.id]: true }));
     try {
       await axios.delete(`/api/v1/cameras/${cam.id}`, { headers });
       setCameras(p => p.filter((_, i) => i !== idx));
-      showToast(`${cam.camId} deleted`, "success");
+      showToast(`${cam.cam_label || cam.camId} deleted`, "success");
     } catch {
       showToast("Delete failed", "error");
     } finally {
@@ -222,24 +215,21 @@ export default function CameraSettingsPage() {
     }
   };
 
-  // ── Test RTSP connection ──
   const testConnection = async (idx) => {
     const cam = cameras[idx];
     const key = cam.id || cam._tempId;
     setTestResult(p => ({ ...p, [key]: "testing" }));
     try {
-      const rtspUrl = cam.rtspUrl ||
-        `rtsp://${cam.username||"admin"}${cam.password?":"+cam.password:""}@${cam.ipAddress}:${cam.port||554}/stream1`;
-      // Use AI stream/start to test — if it connects, camera is reachable
+      const rtspUrl = cam.rtsp_url || cam.rtspUrl ||
+        `rtsp://${cam.username||"admin"}${cam.password?":"+cam.password:""}@${cam.ip_address||cam.ipAddress}:${cam.port||554}/stream1`;
       await axios.post("/api/v1/ai/stream/start", {
-        cameraId: cam.camId || "test-cam",
+        cameraId: cam.cam_label || cam.camId || "test-cam",
         rtspUrl,
         ppeTypes: ["Helmet"],
         confidence: 0.5,
       }, { headers });
-      // Stop it immediately after test
       await axios.post("/api/v1/ai/stream/stop", {
-        cameraId: cam.camId || "test-cam",
+        cameraId: cam.cam_label || cam.camId || "test-cam",
       }, { headers });
       setTestResult(p => ({ ...p, [key]: "ok" }));
     } catch {
@@ -266,7 +256,6 @@ export default function CameraSettingsPage() {
 
       <style>{`@keyframes spin{to{transform:rotate(360deg)}}`}</style>
 
-      {/* Toast */}
       {toast && (
         <div style={{ position:"fixed", top:20, right:20, zIndex:9999,
           background:T.card, border:`1px solid ${toast.type==="error"?T.red:toast.type==="warning"?T.amber:T.green}44`,
@@ -276,7 +265,6 @@ export default function CameraSettingsPage() {
         </div>
       )}
 
-      {/* Header */}
       <div style={{ display:"flex", alignItems:"flex-start",
         justifyContent:"space-between", marginBottom:28 }}>
         <div>
@@ -293,8 +281,7 @@ export default function CameraSettingsPage() {
         <div style={{ display:"flex", gap:10, alignItems:"center" }}>
           <div style={{ background:T.card2, border:`1px solid ${T.border}`,
             borderRadius:10, padding:"8px 16px", textAlign:"center" }}>
-            <div style={{ fontFamily:"'DM Mono',monospace", fontSize:22,
-              color:T.orange }}>
+            <div style={{ fontFamily:"'DM Mono',monospace", fontSize:22, color:T.orange }}>
               {cameras.length}<span style={{ fontSize:14, color:T.g2 }}>/{camLimit}</span>
             </div>
             <div style={{ fontSize:10, color:T.g2, letterSpacing:1 }}>CAMERAS</div>
@@ -311,7 +298,6 @@ export default function CameraSettingsPage() {
         </div>
       </div>
 
-      {/* Agent download banner */}
       <div style={{ background:"rgba(0,212,180,.06)", border:"1px solid rgba(0,212,180,.2)",
         borderRadius:12, padding:"14px 18px", marginBottom:24,
         display:"flex", alignItems:"center", gap:14 }}>
@@ -334,14 +320,12 @@ export default function CameraSettingsPage() {
         </a>
       </div>
 
-      {/* No cameras state */}
       {cameras.length === 0 && (
         <div style={{ textAlign:"center", padding:"48px 24px",
           background:T.card, border:`2px dashed ${T.border}`,
           borderRadius:16, color:T.g2 }}>
           <div style={{ fontSize:48, marginBottom:12 }}>📹</div>
-          <div style={{ fontSize:18, fontWeight:700, color:T.white,
-            marginBottom:8 }}>No cameras yet</div>
+          <div style={{ fontSize:18, fontWeight:700, color:T.white, marginBottom:8 }}>No cameras yet</div>
           <div style={{ fontSize:13, marginBottom:20 }}>
             Add your first camera to start AI safety monitoring
           </div>
@@ -355,7 +339,6 @@ export default function CameraSettingsPage() {
         </div>
       )}
 
-      {/* Group cameras by area */}
       {(() => {
         const grouped = {};
         cameras.forEach((cam, idx) => {
@@ -366,7 +349,6 @@ export default function CameraSettingsPage() {
         });
         return Object.entries(grouped).map(([areaKey, group]) => (
           <div key={areaKey} style={{ marginBottom:24 }}>
-            {/* Zone header */}
             <div style={{ display:"flex", alignItems:"center",
               justifyContent:"space-between", marginBottom:12,
               padding:"10px 14px",
@@ -374,16 +356,12 @@ export default function CameraSettingsPage() {
               border:"1px solid rgba(255,91,24,.2)", borderRadius:10 }}>
               <div style={{ display:"flex", alignItems:"center", gap:10 }}>
                 <span style={{ fontSize:16 }}>📍</span>
-                <span style={{ fontWeight:700, color:T.orange,
-                  fontSize:14 }}>{group.name}</span>
+                <span style={{ fontWeight:700, color:T.orange, fontSize:14 }}>{group.name}</span>
                 <span style={{ fontSize:11, color:T.g2 }}>
                   {group.cameras.length} camera{group.cameras.length!==1?"s":""}
                 </span>
               </div>
-              <button onClick={() => {
-                const area = areas.find(a => a.id === areaKey);
-                addCamera(areaKey, group.name);
-              }}
+              <button onClick={() => addCamera(areaKey, group.name)}
                 style={{ padding:"5px 12px", borderRadius:7,
                   background:"rgba(0,212,180,.1)",
                   border:"1px solid rgba(0,212,180,.3)",
@@ -393,7 +371,6 @@ export default function CameraSettingsPage() {
               </button>
             </div>
 
-            {/* Camera cards */}
             {group.cameras.map(({ cam, idx }) => {
               const key = cam.id || cam._tempId;
               const testR = testResult[key];
@@ -402,7 +379,6 @@ export default function CameraSettingsPage() {
                   border:`1.5px solid ${cam._new||!cam.id?T.teal+"44":T.border}`,
                   borderRadius:12, marginBottom:10, overflow:"hidden" }}>
 
-                  {/* Card header */}
                   <div style={{ background:T.card2, padding:"9px 14px",
                     display:"flex", alignItems:"center", gap:10,
                     borderBottom:`1px solid ${T.border}` }}>
@@ -412,7 +388,6 @@ export default function CameraSettingsPage() {
                       fontFamily:cam.camId||cam.cam_label?"'DM Mono',monospace":"'Nunito',sans-serif" }}>
                       {cam.cam_label || cam.camId || "New Camera"}
                     </span>
-                    {/* Status dot */}
                     <div style={{ display:"flex", alignItems:"center", gap:5,
                       fontSize:11, color:cam.status==="online"?T.green:cam.status==="error"?T.red:T.g2 }}>
                       <div style={{ width:7, height:7, borderRadius:"50%",
@@ -491,7 +466,49 @@ export default function CameraSettingsPage() {
                       </div>
                     </div>
 
-                    {/* Row 3 — PPE rules */}
+                    {/* Row 3 — Camera Role + Headcount */}
+                    <div style={{ background:T.card2, borderRadius:10,
+                      padding:12, marginBottom:12 }}>
+                      <div style={{ fontSize:11, fontWeight:700, color:T.teal,
+                        textTransform:"uppercase", letterSpacing:2,
+                        marginBottom:10, fontFamily:"'DM Mono',monospace" }}>
+                        Camera Role &amp; People Counting
+                      </div>
+                      <div style={{ display:"grid", gridTemplateColumns:"1fr 1fr", gap:14 }}>
+                        <Field label="Camera Role" hint="controls AI pipeline">
+                          {sel(cam.camera_role||"ppe",
+                            v => upd(idx, "camera_role", v),
+                            ["ppe","entry","exit","assembly"])}
+                        </Field>
+                        <Field label="Enable People Counting"
+                          hint="requires role = entry / exit / assembly">
+                          <div style={{ display:"flex", alignItems:"center",
+                            gap:12, paddingTop:8 }}>
+                            <button onClick={() => upd(idx,"headcount_enabled",!(cam.headcount_enabled))}
+                              style={{
+                                width:44, height:24, borderRadius:12,
+                                border:"none", cursor:"pointer",
+                                background:cam.headcount_enabled ? T.teal : T.g2,
+                                transition:"background .2s",
+                                position:"relative", flexShrink:0,
+                              }}>
+                              <div style={{
+                                width:18, height:18, borderRadius:"50%",
+                                background:"#fff",
+                                position:"absolute", top:3,
+                                left: cam.headcount_enabled ? 23 : 3,
+                                transition:"left .2s",
+                              }}/>
+                            </button>
+                            <span style={{ fontSize:12, color:cam.headcount_enabled ? T.teal : T.g2 }}>
+                              {cam.headcount_enabled ? "People counting ON" : "People counting OFF"}
+                            </span>
+                          </div>
+                        </Field>
+                      </div>
+                    </div>
+
+                    {/* Row 4 — PPE rules */}
                     <div style={{ marginBottom:14 }}>
                       <div style={{ fontSize:10, color:T.g1, letterSpacing:1.5,
                         fontWeight:700, fontFamily:"'DM Mono',monospace",
@@ -554,7 +571,6 @@ export default function CameraSettingsPage() {
         ));
       })()}
 
-      {/* Add camera button at bottom */}
       {cameras.length > 0 && cameras.length < camLimit && (
         <button onClick={() => addCamera()}
           style={{ width:"100%", padding:"14px",
