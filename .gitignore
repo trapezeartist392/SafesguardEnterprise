@@ -11,3 +11,4 @@ license-tool/*.lic
 sample-license/
 *.log
 *.tar
+dvr-agent/violations
