@@ -12,3 +12,4 @@ sample-license/
 *.log
 *.tar
 dvr-agent/violations
+frames
